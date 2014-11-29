@@ -1,0 +1,25 @@
+send me a string of this format
+------------------------------------------------------------------------
+<device_id> <sub_id> <machine_status> <tank_75_full> <tank_50_full> <tank_25_full> <flow_status> <motor_status> <signal_status> <voltage> <controller_or_transmitter>
+------------------------------------------------------------------------
+possible values for each parameter ( / indicates OR )
+<device_id> = must be a valid value
+<sub_id> = valid id / NA 
+<machine_status> = ON / OFF / HOLD / NA
+<tank_75_full> = TRUE / FALSE / NA
+<tank_50_full> = TRUE / FALSE / NA
+<tank_25_full> = TRUE / FALSE / NA
+<flow_status> = TRUE / FALSE / NA
+<motor_status> = TRUE / FALSE / NA
+<signal_status> = TRUE / FALSE / NA
+<voltage>  = value / NA
+<controller_or_transmitter> = C(for controller) / T(for transmitter)
+------------------------------------------------------------------------
+example:
+123457 NA NA NA TRUE NA NA NA 250 C
+------------------------------------------------------------------------
+URL for sending data:
+http://localhost:8000/machine/send_data_to_server/
+------------------------------------------------------------------------
+Please tell me in case I have forgotten something        
+	

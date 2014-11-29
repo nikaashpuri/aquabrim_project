@@ -1,0 +1,66 @@
+{% extends "banner_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block banner %}
+    {% load staticfiles %}
+    <script type="text/javascript">
+	window.onload=function(){
+	var tfrow = document.getElementById('tfhover').rows.length;
+	var tbRow=[];
+	for (var i=1;i<tfrow;i++) {
+		tbRow[i]=document.getElementById('tfhover').rows[i];
+		tbRow[i].onmouseover = function(){
+		  this.style.backgroundColor = '#ffffff';
+		};
+		tbRow[i].onmouseout = function() {
+		  this.style.backgroundColor = '#d4e3e5';
+		};
+	}
+};
+
+
+
+</script>
+
+    <link href="{% static "css/table.css" %}" rel="stylesheet" type="text/css" />
+<p><h2>YOUR MACHINES :</h2>
+    <table id="tfhover" class="tftable" border="1">
+<tr><th>ID</th><th>MACHINE NAME</th><th>MACHINE STATUS</th><th>WATER LEVEL</th></tr>
+        {% for machine in object_list %}
+            <script type="text/javascript">
+
+function change() {
+    var the_id = {{ machine.id }};
+    var button = document.getElementById('start_button');
+    if (button.value == "On") {
+        button.value = "Off";
+        window.location.href = "/machine/toggle/?onoff=0&idno=" + the_id;
+    }
+    else {
+        button.value = "On";
+        window.location.href = "/machine/toggle/?onoff=1&idno=" + the_id
+
+    }
+}
+            </script>
+
+<tr><td>{{ machine.id }}</td><td><a href="/machine/get/{{ machine.id }}">{{ machine.name }}</a></td><td><input type="button" class="button" value={{ machine.onStatus }} id="start_button" onclick="change();" /></td><td>{{ machine.machine_status }} %</td></tr>
+{% endfor %}
+</table></p>
+
+
+
+    {% if user.is_authenticated %}
+        {% url "add-machine" as add_machine_url %}
+        <p class="what_next">{% blocktrans %}<a href="{{ add_machine_url }}" class="btn btn-primary large">add machine</a>{% endblocktrans %}</p>
+    {% else %}
+        {% url "account_login" as login_url %}
+        {% url "account_signup" as signup_url %}
+        <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
+    {% endif %}
+{% endblock %}

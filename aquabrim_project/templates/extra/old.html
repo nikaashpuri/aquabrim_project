@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+	<link href="{% static "css/style.css" %}" rel="stylesheet">
+</head>
+
+<body>
+<div>
+    <div class="header">
+	<div class="logo">
+		<img src="{% static "css/logo.jpg" %}" height="106%" width="100%">
+	</div>
+	<div class="product">
+		<font face="Comic Sans MS, cursive" size="4"><p align="center">{{ data.name.upper }}</p></font>
+	</div>
+	</div>
+	<br>
+	<div class="middle" >
+
+		
+		<div class="product_image">
+			<div class="data">
+            <div class="inner">
+			<p>Machine Name : {{ data.name }}</p>
+            <p>Field 1 : {{ data.id }} </p>
+            <p>field 2 : {{ data.device_id }} </p>
+		</div>
+        <div class="low">
+        </div>
+        </div>
+		</div>
+		<div class="line">
+		</div>
+		<div class="table">
+			<img src="{% static "css/logo.jpg" %}" class="image" height="90%" width="100%" >
+				
+		<div class="next">
+			<a href="#" class="button">START</a>
+		</div>
+		</div>
+		<br>
+		
+		
+		
+				
+	</div>
+</div>
+</body>
+</html>

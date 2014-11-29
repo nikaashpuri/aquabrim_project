@@ -1,0 +1,34 @@
+{% extends "banner_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block banner %}
+    <h1>{% trans "Welcome to AQUABRIM" %}</h1>
+    <p>
+        {% blocktrans %}
+        Water is life because plants and animals cannot live without water. Water is needed to ensure food security, feed livestock, maintain organic life, take up industrial production and to conserve the biodiversity and environment. Hence, there is no life without water. Water scarcity has gripped several states in India as groundwater levels continue to deplete at an alarming rate. Inequitable distribution, losses in transmission and distribution, and unauthorized use of water have only added to the city's water woes. Experts say the current crisis is not just the disturbance in the demand and supply curve but also about mismanagement of water resources. According to a recent World Bank report, most major Indian cities will run dry by 2020. The technology can play a crucial role in water resource management.<br><br>
+
+        Aquabrim has a vision to develop to robust and innovative technology to manage the water resource efficiently. Adherence to stringent ethical standards, constant R&D,as well as the use of latest technology make Aquabrim capable of optimally satisfying the water management needs of its industrial and domestic clients.
+        {% endblocktrans %}
+    </p>
+
+    <h2>About Account Project</h2>
+    <p>
+        {% blocktrans %}
+            more info here if wanted
+        {% endblocktrans %}
+    </p>
+
+    {% if user.is_authenticated %}
+        {% url "what_next" as what_next_url %}
+        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn btn-primary large">What Next</a>?{% endblocktrans %}</p>
+    {% else %}
+        {% url "account_login" as login_url %}
+        {% url "account_signup" as signup_url %}
+        <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
+    {% endif %}
+{% endblock %}

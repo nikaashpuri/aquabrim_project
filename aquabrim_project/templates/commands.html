@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<div>
+<h1>LIST OF COMMANDS</h1><br/>
+    
+<form name="input" action="submit" method="get">
+SUB-ID: <input type="text" name="sub_id" value="{{ controller.sub_ID }}"><br />
+flow status: <input type="text" name="flow_status" value="{{ controller.flow_status }}"><br />
+overflow status: <input type="text" name="overflow" value="{{ controller.overflow_status }}"><br />
+water level: <input type="text" name="water" value="{{ controller.water_level }}">
+<input value="1" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+Reserved for future!
+    <input value="2" type="hidden" name="id">
+<!--input type="submit" value="Submit"-->
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+sub-id: <input type="text" name="sub_id" value="{{ controller.sub_ID }}"><br />
+low-level alarm: <input type="text" name="lla" value="{{ controller.low_level_alarm }}"><br />
+full-level alarm: <input type="text" name="fla" value="{{ controller.full_level_alarm }}"><br />
+motor trigger: <input type="text" name="mt" value="{{ controller.motor_trigger }}"><br />
+flow protection: <input type="text" name="fp" value="{{ controller.flow_protection }}"><br />
+Enable/disable: <input type="text" name="End" value="{{ controller.enable_disable }}"><br />
+No signal duration: <input type="text" name="nsd" value="{{ controller.no_signal_duration }}">
+    <input value="3" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+mode: <input type="text" name="mode" value="{{ controller.mode_selection }}">
+    Trial enabled: <input type="text" name="Tr" value="{{ controller.trial_enabled }}">
+    Trial period: <input type="text" name="D" value="{{ controller.trial_period }}">
+    Timer based: <input type="text" name="T" value="{{ controller.timer_based }}">
+    <input value="4" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+type of Tx: <input type="text" name="tx_type" value="{{ controller.Tx_type }}"><br />
+type of water-level: <input type="text" name="water_type" value="{{ controller.water_level_type }}"><br />
+offset level for reset: <input type="text" name="offset" value="{{ controller.offset_level_reset }}"><br />
+Water-level: <input type="text" name="water" value="{{ controller.water_level }}">
+    <input value="5" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+restart delay: <input type="text" name="rd" value="{{ controller.restart_delay }}"><br />
+trial gap: <input type="text" name="tg" value="{{ controller.trial_gap }}"><br />
+trial duration: <input type="text" name="td" value="{{ controller.trial_duration }}"><br />
+number of trials: <input type="text" name="n" value="{{ controller.trials }}"><br />
+operating mode: <input type="text" name="om" value="{{ controller.operating_mn }}">
+    <input value="6" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+start delay: <input type="text" name="sd" value="{{ controller.initial_start_delay }}"><br />
+enable protection: <input type="text" name="ep" value="{{ controller.timeout_protection }}"><br />
+timeout duration: <input type="text" name="td" value="{{ controller.timeout_duration }}">
+    <input value="7" type="hidden" name="id">
+<input type="submit" value="Submit">
+
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+enable: <input type="text" name="en" value="{{ controller.voltage_enable }}"><br />
+offset voltage: <input type="text" name="ov" value="{{ controller.offset_voltage }}"><br />
+low voltage protection: <input type="text" name="lvp" value="{{ controller.low_volt_protection }}"><br />
+high voltage protection: <input type="text" name="hvp" value="{{ controller.high_volt_protection }}"><br />
+low voltage point: <input type="text" name="low" value="{{ controller.low_voltage_point }}"><br />
+high voltage point: <input type="text" name="high" value="{{ controller.high_voltage_point }}">
+    <input value="8" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+week days: <input type="text" name="wd" value="{{ controller.week_days }}"><br />
+hours: <input type="text" name="h" value="{{ controller.hours }}"><br />
+timer enable: <input type="text" name="te" value="{{ controller.timer_enable }}"><br />
+timer number: <input type="text" name="tn" value="{{ controller.timer_number }}">
+<input value="9" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+week days: <input type="text" name="wd" value="{{ controller.week_days }}"><br />
+hours: <input type="text" name="h" value="{{ controller.hours }}"><br />
+M: <input type="text" name="m" value="{{ controller.m }}">
+    <input value="10" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+No signal alarm sump: <input type="text" name="nsas" value="{{ controller.no_signal_alarm_sump }}"><br />
+No signal alarm Top: <input type="text" name="nsat" value="{{ controller.no_signal_alarm_top }}"><br />
+Manual motor on: <input type="text" name="mmo" value="{{ controller.manual_motor_on_alarm }}"><br />
+Motor ON: <input type="text" name="mo" value="{{ controller.motor_on_alarm }}"><br />
+Flow error: <input type="text" name="fe" value="{{ controller.flow_error_alarm }}"><br />
+Time out alarm: <input type="text" name="toa" value="{{ controller.timeout_alarm }}"><br />
+High voltage alarm: <input type="text" name="hva" value="{{ controller.high_voltage_alarm }}"><br />
+Low voltage alarm: <input type="text" name="lva" value="{{ controller.low_voltage_alarm }}"><br />
+Tx alarm: <input type="text" name="Tx" value="{{ controller.Tx_alarm }}">
+    <input value="11" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+
+<form name="input" action="submit" method="get">
+To be added later!
+    <input value="12" type="hidden" name="id">
+<input type="submit" value="Submit">
+</form><br /><hr /><br />
+    
+</div>
+</body>
+</html>
