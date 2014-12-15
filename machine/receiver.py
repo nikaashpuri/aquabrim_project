@@ -7,23 +7,36 @@ def ConvertAndSave(Controller, s = '00000000000000000000000000000011111111111111
         array.append(s[(i*8):((i+1)*8)])
 
     idno = int(str(int(array[0], 2))+str(int(array[1], 2))+str(int(array[2], 2)))
-    print idno
-    obj = Controller.objects.get(device_id=idno)
+    # print idno
     command = int(array[3], 2)
 
     PA = array[4]
     PB = array[5]
 
+    if command == 1 or command == 3:
+        # we have both main and sub id
+        sub_id = int(PA[0:6], 2)
+        obj = Controller.objects.get(device_id=idno, sub_ID=sub_id)
+        make_changes_on_single_object(obj, command, PA, PB)
+    else:
+        # in case no valid sub id was specified, then apply to all devices
+        objs = Controller.objects.get(device_id=idno)
+        for obj in objs:
+            make_changes_on_single_object(obj, command, PA, PB)
+
+
+
+
+def make_changes_on_single_object(obj, command, PA, PB):
+
     if command==1:
         #------------------------for Payload A---------------------------#
-        '''consedering that the sub-ID is a number decoded in 6-bit binary'''
-        sub_id = int(PA[0:6], 2)
+        '''considering that the sub-ID is a number decoded in 6-bit binary'''
         overflow_stat = PA[6]
         flow_stat = PA[7]
         #------------------------for Payload B----------------------------#
         water_level = int(PB[1:8], 2)
 
-        obj.sub_ID = str(sub_id)
         obj.overflow_status = overflow_stat
         obj.flow_status = flow_stat
         obj.water_level = water_level
@@ -34,7 +47,6 @@ def ConvertAndSave(Controller, s = '00000000000000000000000000000011111111111111
 
     elif(command==3):
         #------------------------for Payload A---------------------------#
-        sub_id = int(PA[0:6], 2)
         AF = PA[6]
         AL = PA[7]
 
@@ -46,7 +58,6 @@ def ConvertAndSave(Controller, s = '00000000000000000000000000000011111111111111
 
         obj.low_level_alarm = AL
         obj.full_level_alarm = AF
-        obj.sub_ID = sub_id
         obj.motor_trigger = M
         obj.flow_protection = F
         obj.enable_disable = E
@@ -90,22 +101,24 @@ def ConvertAndSave(Controller, s = '00000000000000000000000000000011111111111111
         M_operating = int(PB[6:8], 2)
 
         obj.restart_delay = Rd
-        obj.trial_gap = Tg
-        obj.trial_duration = Td
+        obj.trial_gap = Tg*3
+        obj.trial_duration = Td*2
         obj.trials = N
         obj.operating_mn = M_operating
 
 
     elif(command==7):
         #------------------------for Payload A---------------------------#
+        ri = int(PA[:3], 2)
         Sd = int(PA[3:7], 2)
         En = int(PA[7], 2)
         #------------------------for Payload B---------------------------#
         To = int(PB[0:8], 2)
 
+        obj.reset_interval = ri*15
         obj.initial_start_delay = Sd
         obj.timeout_protection = En
-        obj.timeout_duration = To
+        obj.timeout_duration = (To*2) + 60
 
     elif(command==8):
         #------------------------for Payload A---------------------------#
@@ -119,8 +132,8 @@ def ConvertAndSave(Controller, s = '00000000000000000000000000000011111111111111
         Hv = int(PB[3:8], 2)
 
         obj.voltage_enable = En
-        obj.high_voltage_point = Hv
-        obj.low_voltage_point = Lv
+        obj.high_voltage_point = (Hv*4) + 240
+        obj.low_voltage_point = 200 - (Lv*3)
         obj.offset_voltage = Ov
         obj.low_volt_protection = LE
         obj.high_volt_protection = HE
@@ -182,4 +195,3 @@ def ConvertAndSave(Controller, s = '00000000000000000000000000000011111111111111
         print "SOMETHING SEEMS TO BE WRONG HERE!!!!! GO AWAY!!!!"
 
     obj.save()
-

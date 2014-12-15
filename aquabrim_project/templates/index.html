@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+	    {% block content %}
+
+
+			<div class="middle-container">
+				<div class="left-sidebar">
+					<h2 class="heading">Tanks</h2>
+					<ul class="left-navigation">
+                    <li><br></li>
+                        {% for tank in list_of_tanks %}
+						<li {% if forloop.counter0 == tank_to_focus_on%}class="active"{% endif %}
+                            {% if forloop.counter0 != tank_to_focus_on%}class="active"{% endif %}
+                                style="background: green;">
+                            <a href="?tank_to_focus_on={{ forloop.counter0 }}">{{ tank.name }}</a>
+                        </li>
+                        {% endfor %}
+						</ul>
+				</div>
+				<div class="content">
+					<div class="table-data-container">
+						<table width="100%" border="1" cellspacing="0" cellpadding="0" class="table-data" id="gridLevelTankLevel">
+							<th class="heading" width="20%" style="background: #000000;">Name</th>
+
+                            <th class="heading" width="20%" style="background: #000000;">Low Level</th>
+							<th class="heading" width="40%" style="background: #000000;">Present Water Level</th>
+							<th class="heading" width="20%" style="background: #000000;">Full Level</th>
+                        	<th class="heading" width="4%" style="font-size: 10px;background: #000000;">Over Flow&nbsp;&nbsp;</th>
+							<th class="heading" width="4%" style="font-size: 10px;background: #000000;">&nbsp;Sump Low&nbsp;</th>
+                            <th class="heading" width="4%" style="font-size: 10px;background: #000000;">No Signal</th>
+							<th class="heading" width="4%" style="font-size: 10px;background: #000000;">Low Level&nbsp;</th>
+
+
+                        {% for data in list_of_tanks %}
+                            <tr>
+                                <td>{{ data.name }}</td>
+								<td class="first"><span class="grid-tank-level" fillgridto="{{ data.low_water_level }}">&nbsp;</span>{{ data.low_water_level }}%</td>
+								<td class="second"><span class="gradient grid-tank-level" fillgridto="{{ data.water_level }}%">&nbsp;</span>{{ data.water_level }}%</td>
+								<td class="third"><span class="grid-tank-level" fillgridto="{{ data.full_water_level }}">&nbsp;</span>{{ data.full_water_level }}%</td>
+                                <td {% if data.overflow_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <td {% if data.no_signal_alarm_sump == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <td {% if data.no_signal_alarm_top == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <td {% if data.low_level_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+
+                        	</tr>
+                        {% endfor %}
+						</table>
+					</div>
+					<div class="status-block" style="font-size: 20px;">
+						<form method="get" action="submit">
+                        Motor Status
+                        <input type="hidden" name="id" value="13">
+                            {% if data.onoff == 1%}
+                                <input type="hidden" name="onoff" value="0">
+                                <input type="submit" value="ON" style="background: red; color: #ffffff;">
+                                &nbsp;&nbsp;
+						    <br>
+                                <span>
+							Motor has been on for: <span style="color: red;">1 Hours
+							&nbsp;
+							35 Min</span>
+
+						</span>
+                            {% endif %}
+                            {% if data.onoff == 0%}
+                                <input type="hidden" name="onoff" value="1">
+                                <input type="submit" value="OFF" style="background: green; color: #ffffff;">
+                            &nbsp;&nbsp;
+                                <br>
+						    <span>
+							Motor is off
+						</span>
+                            {% endif %}
+                        </form>
+
+					</div>
+				</div>
+				<div class="right-sidebar">
+					<h2 class="heading">ALARM</h2>
+					<ul class="right-navigation">
+                        <li><br></li>
+						<li {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">High Volt</a></li>
+						<li {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">Low Volt</a></li>
+						<li {% if data.timeout_alarm == 1%}class="active blink"{% endif %}><a href="">Time Out</a></li>
+						<li {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}><a href="">Comm. Error</a></li>
+						<li {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}><a href="">Flow Error</a></li>
+						<li {% if data.line_water_alarm == 1%}class="active blink"{% endif %}><a href="">Line Water</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+        {% endblock %}
+

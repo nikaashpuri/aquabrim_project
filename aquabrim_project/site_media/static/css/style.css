@@ -1,171 +1,242 @@
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+*,html{
+	margin:0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	font-size: 12px;
+	font-family:sans-serif;
+	letter-spacing:1px;
+}
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+.clear{clear: both;height: 1px;}
+ul li{list-style: none;}
+.container{
+	width: 1000px;
+	margin: 20px auto;
+	position: relative;
+	box-shadow: 2px 1px 5px #000000;
+}
+.container .aqua-brim-logo{
+	display: block;
+    left: -86px;
+    position: absolute;
+    top: -6px;
+}
+.header{
+	background: #ccc;
+}
+.header ul.header-navigation{background: #ccc;padding: 5px 0 5px 10px;float: left;}
+.header ul.header-navigation li{
+	float: left;
+	line-height: 30px;
+	padding: 0 10px;
+	border-radius: 4px;
+}
+.header ul.header-navigation li.active{
+	background: #4f81bc;
+}
+.header ul.header-navigation li.active a{
+	color: #fff;
+}
+.middle-container{background: #eee; margin-top: 4px;}
+.middle-container .left-sidebar{
+	width: 100px;
+	border:1px solid #ccc;
+	border-bottom: 0; 
+	text-align: center;
+	border-top: 0;
+	float: left;
+	min-height: 440px;
 	display: block;
 }
-body {
-	font: 12px/18px Arial, sans-serif;
-	color: white;
-	background: black;
+.middle-container .left-sidebar .left-navigation li{line-height: 30px;border-bottom: 1px solid #000;}
+.middle-container .left-sidebar .left-navigation li.active{box-shadow:-1px 3px 6px #000;background: #4f81bd; color: #fff;}
+.middle-container .left-sidebar .left-navigation li.active a{color: #fff;}
+.middle-container .left-sidebar .left-navigation li:last-child{border-bottom: 0;}
+h2.heading{background: #ccc;border:2px solid blue;text-align: center;line-height: 26px;border-radius: 4px 4px 0 0;font-size: 13px;}
+.middle-container .content{
+	width: 796px;float: left;
+	background: none repeat scroll 0 0 #4F81BD;
 }
-
-/* Header
------------------------------------------------------------------------------*/
-.header {
-	margin-left: auto;
-    margin-right: auto;
-	height: 20%;
-	width: 100%;
-	position: absolute; 
-	background: black;
+.middle-container .content .table-data-container{
+	min-height: 400px;
+	background: none repeat scroll 0 0 #4F81BD;
+}
+.middle-container .content .table-data th{background: #4f81bc;line-height: 30px;font-size: 12px;color: #fff;}
+.middle-container .content .table-data td{text-align: center;line-height: 29px; border:1px solid #eee; background: #4F81BD;}
+.middle-container .content .table-data td.first{background: #a6a6a6;}
+.middle-container .content .table-data td.second{background: #ccc;}
+.middle-container .content .table-data td.third{background: #a6a6a6;}
+.gradient{
+	display: inline-block;
 	float: left;
+	background: #207cca; /* Old browsers */
+	background: -moz-linear-gradient(top, #207cca 16%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(16%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #207cca 16%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #207cca 16%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #207cca 16%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #207cca 16%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 }
-
-.logo{
-	display:inline-block;
-	height:100%;
-	width:20%;
-	position: absolute; 
+/*.grid-tank-level{display: inline-block;float: left;}*/
+.middle-container .right-sidebar{
+	width: 100px;
+	border:1px solid #ccc;
+	border-bottom: 0; 
+	text-align: center;
+	border-top: 0;
 	float: left;
-	margin-left:15%;
+	min-height: 440px;
+}
+.middle-container .right-sidebar .right-navigation li{line-height: 30px;border-bottom: 1px solid #000;}
+.middle-container .right-sidebar .right-navigation li.active{box-shadow:-1px 3px 6px #000;}
+.middle-container .right-sidebar .right-navigation li:last-child{border-bottom: 0;}
+.left{float: left;}
+.left-align{text-align: left!important;}
+.right{float: right;}
+.footer{
+	margin-top: 10px;
+	background: #eee;
+	line-height: 30px;
+	padding: 0 20px;
+	box-shadow: 0px 2px 2px #000;
+}
+.button{
+	border-radius: 4px;
+	background: #ccc;
+	padding: 4px 8px;
+	border: 0;
+}
+.button.on{
+	background: green;
+	color: #fff;
+	width: auto;
+}
+.button.off{
+	background: red;
+	color: #fff;
+	width: auto;
+}
+.text-box{
+	text-align: center;
+	box-shadow: 2px 2px 2px #000;
+	border: 0;
+	border:1px solid #000;
+	padding: 4px;
+}
+.status-block{
+	text-align: center;
+	line-height: 40px;
+	background: #ccc;
+}
+.button-block .button.off, .button-block .button.on{
+	display: block;
+	margin-top: 10px;
+	line-height: 20px;
+	border: 2px solid #4F81BC;
+
 }
 
-.product{
-	height:100%;
-	width:8%;
-	float: left;
-	margin-left:70%;
-	position: absolute; 
-	color: blue;
-}
-
-
-/* Middle
------------------------------------------------------------------------------*/
-.middle {
-	width: 100%;
-	height:80%;
-	position: absolute;
-	margin-top:8%;
-}
-
-.product_image{
-	margin-left:10%;
-	margin-top:2%;
-	height:60%;
-	width:40%;
-	float: left;
-	position: absolute;
-}
-
-.line{
-	margin-left:50%;
-	height:110%;
-	margin-top:-2%;
-	width:15px;
-	float: left;
-	background: grey;
-	position: absolute;
-	-webkit-border-top-left-radius:21px;
-	-moz-border-radius-topleft:21px;
-	border-top-left-radius:21px;
-	-webkit-border-top-right-radius:21px;
-	-moz-border-radius-topright:21px;
-	border-top-right-radius:21px;
-	-webkit-border-bottom-right-radius:21px;
-	-moz-border-radius-bottomright:21px;
-	border-bottom-right-radius:21px;
-	-webkit-border-bottom-left-radius:21px;
-	-moz-border-radius-bottomleft:21px;
-	border-bottom-left-radius:21px;
-}
-
-.data{
-	margin-left:auto;
-	float: left;
-	margin-right:10%;
-	margin-top:10%;
-	width:40%;
-	position: absolute;
-}
-
-.table{
-	margin-left:55%;
-	margin-top:2%;
-	float: right;
-	margin-right:10%;
-	position: absolute;
-	height:80%;
-	width:40%;
-}
-
-.image{
-	-webkit-border-top-left-radius:21px;
-	-moz-border-radius-topleft:21px;
-	border-top-left-radius:21px;
-	-webkit-border-top-right-radius:21px;
-	-moz-border-radius-topright:21px;
-	border-top-right-radius:21px;
-	-webkit-border-bottom-right-radius:21px;
-	-moz-border-radius-bottomright:21px;
-	border-bottom-right-radius:21px;
-	-webkit-border-bottom-left-radius:21px;
-	-moz-border-radius-bottomleft:21px;
-	border-bottom-left-radius:21px;
-}
-
-.next{
-	margin-left:80%;
-	margin-top:10%;
-	float: left;
-	height: 20%;
-	width:10%;
-	position: absolute;
-}
-
-.button {
-	-moz-box-shadow:inset 4px 1px 9px -2px #c1ed9c;
-	-webkit-box-shadow:inset 4px 1px 9px -2px #c1ed9c;
-	box-shadow:inset 4px 1px 9px -2px #c1ed9c;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c2e07b), color-stop(1, #8cb82b) );
-	background:-moz-linear-gradient( center top, #c2e07b 5%, #8cb82b 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c2e07b', endColorstr='#8cb82b');
-	background-color:#c2e07b;
-	-webkit-border-top-left-radius:21px;
-	-moz-border-radius-topleft:21px;
-	border-top-left-radius:21px;
-	-webkit-border-top-right-radius:21px;
-	-moz-border-radius-topright:21px;
-	border-top-right-radius:21px;
-	-webkit-border-bottom-right-radius:21px;
-	-moz-border-radius-bottomright:21px;
-	border-bottom-right-radius:21px;
-	-webkit-border-bottom-left-radius:21px;
-	-moz-border-radius-bottomleft:21px;
-	border-bottom-left-radius:21px;
-	text-indent:0px;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	font-style:normal;
-	height:44px;
-	line-height:44px;
-	width:142px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:3px 2px 9px #689324;
+/* [ Tanker CSS ] */
+	.tanker{
+		width: 400px;
+		margin: 20px auto 0px auto;
+		position: relative;
+	}
+	.blank-tanker{
+		background: url(../images/tank/blank-tanker.png) no-repeat;
+		height: 300px;
+		width: 191px;
+	}
+	.tank-left-measure{
+		position: absolute;
+		left: -40px;
+	}
+	.current-water-level{
+		position: absolute;
+		left: 191px;
+		top: 42px;
+	}
+	.water-blower{
+		position: absolute;
+		left: 191px;
+		top: 250px;
+	}
+	.water-level-incrementer{
+		text-align: center;
+		padding-top: 50px;
+		color: #fff;
+		width: 140px;
+		margin: 0 auto;
+	}
+	.water-level-incrementer li.active{
+		background: none repeat scroll 0 0 #4F81BC;
+		color: #fff;
+	}
+	.water-level-incrementer li{
+		margin-bottom: 3px;
+		background: #000;
+		border-radius: 40px;
+	}
+	/* [ Full Tank ] */
+	.full-tank-block{
+		position: absolute;
+		left: 200px;
+		top: 70px;
+	}
+	.full-tank-block .strip{
+		position: absolute;
+		left: -199px;
+		background: red;
+		width: 200px;
+		height: 2px;
+		top: 6px;
+	}
+	/* [/ Full Tank ] */
 	
-}
-.button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #c2e07b) );
-	background:-moz-linear-gradient( center top, #8cb82b 5%, #c2e07b 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#c2e07b');
-	background-color:#8cb82b;
-}
-.button:active {
-	position:relative;
-	top:1px;
-}
+	/* [ Low Tank ] */
+	.low-tank-block{
+		position: absolute;
+		left: 200px;
+		top: 200px;
+	}
+	.low-tank-block .strip{
+		position: absolute;
+		left: -199px;
+		background: red;
+		width: 200px;
+		height: 1px;
+		top: 6px;
+	}
+	/* [/ Low Tank ] */
 
+	/* [ Tank Setting ] */
+	.alarm{width: 50px;}
+	.middle-container .content .table-data.tank-setting th{
+		line-height: 15px;
+		font-size: 10px;
+	}
+	.middle-container .content .table-data.tank-setting td{
+		line-height: 29px;
+	}
+	.middle-container .content .table-data.tank-setting .alarm{
+		float: left;
+		display: block;
+		width: 50px;
+	}
+	/* [ /Tank Setting ] */
 
+	/* [ Controller Setting ] */
+	.middle-container .content .table-data.controller-setting td{
+		line-height: 29px;
+		text-align: left;
+		padding-left: 20px;
+	}
+	/* [/ Controller Setting ] */
+/* [/ Tanker CSS ] */
+.green-text{color: green;}
+.red-text{color: red;}
+.blink{background: red;}

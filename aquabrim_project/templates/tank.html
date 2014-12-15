@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load staticfiles%}
+	<body>
+		<div class="container">
+
+			<div class="middle-container">
+				<div class="left-sidebar">
+					<h2 class="heading">Tanks</h2>
+					<ul class="left-navigation">
+						{% for tank in list_of_tanks %}
+						<li {% if forloop.counter0 == tank_to_focus_on%}class="active blink"{% endif %}
+                            {% if forloop.counter0 != tank_to_focus_on%}class="active"{% endif %}>
+                            <a href="?tank_to_focus_on={{ forloop.counter0 }}">{{ tank.name }}</a>
+                        </li>
+                        {% endfor %}
+					</ul>
+				</div>
+				<div class="content">
+					<div class="table-data-container">
+						<div class="tanker">
+							<div class="blank-tanker">
+								<span class="tank-left-measure">
+									<img src="{% static "css/tank-left-measure.png" %}" height="200" />
+								</span>
+								<span class="current-water-level">
+									<img src="{% static "css/current-water-level.png" %}" />
+								</span>
+								<span class="water-blower">
+									<img src="{% static "css/water-blower.png" %}" />
+								</span>
+								<ul class="water-level-incrementer">
+									<li {% if data.water_level >= 100 %}style="background: blue;"{% endif %}><span>O F</span></li>
+									<li {% if data.water_level >= 100 %}style="background: blue;"{% endif %}><span>100</span></li>
+									<li {% if data.water_level >= 90 %}style="background: blue;"{% endif %}><span>90</span></li>
+									<li {% if data.water_level >= 80 %}style="background: blue;"{% endif %}><span>80</span></li>
+									<li {% if data.water_level >= 70 %}style="background: blue;"{% endif %}><span>70</span></li>
+									<li {% if data.water_level >= 60 %}style="background: blue;"{% endif %} ><span>60</span></li>
+									<li {% if data.water_level >= 50 %}style="background: blue;"{% endif %}><span>50</span></li>
+									<li {% if data.water_level >= 40 %}style="background: blue;"{% endif %}><span>40</span></li>
+									<li {% if data.water_level >= 30 %}style="background: blue;"{% endif %}><span>30</span></li>
+									<li {% if data.water_level >= 20 %}style="background: blue;"{% endif %}><span>20</span></li>
+									<li {% if data.water_level >= 10 %}style="background: blue;"{% endif %}><span>10</span></li>
+									<li {% if data.water_level >= 0 %}style="background: blue;"{% endif %}><span>00</span></li>
+								</ul>
+								<div class="full-tank-block" style="margin-top: {{ data.full_water_level|add:"-80" }}px;">
+									<span class="strip">&nbsp;</span>
+									<span class="text button on">Full</span>
+								</div>
+								<div class="low-tank-block" style="margin-top: {{ data.full_water_level|add:"-80" }}px;">
+									<span class="strip">&nbsp;</span>
+									<span class="text button off">Low</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="status-block">
+						<span> Motor Status </span>
+						<span class="on button">
+                            {% if data.onoff == 1%}ON{% endif %}
+                            {% if data.onoff == 0%}OFF{% endif %}
+                        </span>
+						&nbsp;&nbsp;
+						<span> 
+							Since <input type="text" class="text-box" value="01" size="1" /> Hours
+							&nbsp;
+							<input type="text" class="text-box" value="35" size="1" /> Min
+							<select>
+								<option>AM</option>
+								<option>PM</option>
+							</select>
+						</span>
+					</div>
+				</div>
+				<div class="right-sidebar">
+					<h2 class="heading">ALARM</h2>
+					<ul class="right-navigation">
+						<li {% if data.no_signal_alarm_top == 1%}class="active blink"{% endif %}><a href="">No Signal</a></li>
+						<li {% if data.overflow_alarm == 1%}class="active blink"{% endif %}><a href="">Overflow</a></li>
+						<li {% if data.low_level_alarm%}class="active blink"{% endif %}><a href="">Low Level</a></li>
+						<li {% if data.no_signal_alarm_sump == 1%}class="active blink"{% endif %}><a href="">Sump Low</a></li>
+						<li {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">High Volt</a></li>
+						<li {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">Low Volt</a></li>
+						<li {% if data.timeout_alarm == 1%}class="active blink"{% endif %}><a href="">Timeout</a></li>
+						<li {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}><a href="">Comm. Error</a></li>
+						<li {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}><a href="">Flow Error</a></li>
+						<li {% if data.line_water_alarm == 1%}class="active blink"{% endif %}><a href="">Line Water</a></li>
+					</ul>
+				</div>
+
+			</div>
+{% endblock %}

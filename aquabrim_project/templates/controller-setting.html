@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block content %}
+
+		<div class="container">
+
+			<div class="middle-container">
+				<div class="left-sidebar">
+					<h2 class="heading">Setting</h2>
+					<ul class="left-navigation">
+						<li><a href="">High Volt (Volt)</a></li>
+						<li><a href="">Low Volt (Volt)</a></li>
+						<li><a href="">Time Out (Min)</a></li>
+						<li><a href="">Trial Time (Min)</a></li>
+						<li><a href="">Trial (Nos)</a></li>
+						<li><a href="">Trial Gap (Min)</a></li>
+						<li style="font-size: 10px;"><a href="">Reset Time (Min)</a></li>
+						<li style="font-size: 10px;"><a href="">Start Delay (Min)</a></li>
+						<li style="font-size: 8px;"><a href="">Restart Delay (Min)</a></li>
+						<li><a href="">License Type</a></li>
+						<li><a href="">Select Motor</a></li>
+						<li><a href="">Max Motor On Time</a></li>
+					</ul>
+				</div>
+				<div class="content">
+					<div class="table-data-container">
+						<table width="40%" cellspacing="0" cellpadding="0" class="table-data controller-setting">
+							<th class="heading">Value</th>
+							<th class="heading">Alarm</th>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="8" />
+                                    <td><input name="high" type="number" value="{{ data.high_voltage_point }}" size="2" min="240"/></td>
+                                    <td><input class="checkbox" type="checkbox" name="hvp" value="1" {% if data.high_volt_protection == 1%}checked{% endif %} /> </td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+                            </tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="8" />
+                                    <td><input name="low" type="number" value="{{ data.low_voltage_point }}" size="2" min="155" max="200" /></td>
+                                    <td><input class="checkbox" type="checkbox" name="lvp" value="1" {% if data.low_volt_protection == 1%}checked{% endif %} /> </td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="7" />
+                                    <td><input name="td" type="number" value="{{ data.timeout_duration }}" size="2" min="60" /></td>
+                                    <td><input class="checkbox" type="checkbox" name="ep" value="1" {% if data.timeout_protection == 1%}checked{% endif %} /> </td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="6" />
+                                    <td><input name="td" type="number" value="{{ data.trial_duration }}" size="2" min="3" max="65"/></td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="6" />
+                                    <td><input name="n" type="number" value="{{ data.trials }}" size="2" min="1" max="4"/></td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="6" />
+                                    <td><input name="tg" type="number" value="{{ data.trial_gap }}" size="2" min="8" max="53"/></td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="7" />
+                                    <td><input name="ri" type="number" value="{{ data.reset_interval }}" size="2" min="45" max="105" /></td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="7" />
+                                    <td><input name="sd" type="number" value="{{ data.initial_start_delay }}" size="2" min="0" max="15"/></td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="6" />
+                                    <td><input name="rd" type="number" value="{{ data.restart_delay }}" size="2" min="0" max="7"/></td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="14" />
+                                    <td><select name="lt">
+                                        <option value="{{ data.license_type }}" selected>{{ data.license_type }}</option>
+                                    </select>
+
+                                    </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="6" />
+                                    <td><select name="om">
+                                        <option value="3" {% if data.operating_mn == 3 %}selected{% endif %}>Alternate</option>
+                                        <option value="2" {% if data.operating_mn == 2 %}selected{% endif %}>Motor no 1 & 2</option>
+                                        <option value="0" {% if data.operating_mn == 0 %}selected{% endif %}>Motor no 1</option>
+                                        <option value="1" {% if data.operating_mn == 1 %}selected{% endif %}>Motor no 2</option>
+
+                                    </select>                 </td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                    <input type="hidden" name="id" value="14" />
+                                        <td><select name="mmo">
+                                        <option value="as per timer" {% if data.max_motor_on == 'as per timer' %}selected{% endif %}>as per timer</option>
+                                        <option value="as per timeout" {% if data.max_motor_on == 'as per timeout' %}selected{% endif %}>as per timeout</option>
+
+                                    </select>                 </td>
+                                    <td><input type="submit" value="submit" /> </td>
+                                </form>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+		{% endblock %}

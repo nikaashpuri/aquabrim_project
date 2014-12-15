@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<body>
+		<div class="container">
+
+			<div class="middle-container">
+				<div class="left-sidebar">
+					<h2 class="heading">Settings</h2>
+					<ul class="left-navigation">
+						<li><a href="">Display</a></li>
+						<li><a href="">Selection</a></li>
+						<li><a href="">Scroll Time</a></li>
+					</ul>
+				</div>
+				<div class="content">
+					<div class="table-data-container">
+						<table width="40%" cellspacing="0" cellpadding="0" class="table-data controller-setting">
+							<th class="heading" colspan="2">Select</th>
+							<tr>
+                                <form method="get" action="submit">
+                                <input type="hidden" name="id" value="102">
+								<td><input class="checkbox" type="checkbox" name="gon" value="1" {% if data.graphical_or_not == 1 %}checked{% endif %} id="gon" onchange="if(this.checked){document.getElementById('non').checked=false;}"/> Graphical </td>
+								<td><input class="checkbox" type="checkbox" name="non" value="1" {% if data.numerical_or_not == 1 %}checked{% endif %} id="non" onchange="if(this.checked){document.getElementById('gon').checked=false;}"/> Numerical </td>
+                                <td><input type="submit" value="submit"></td>
+                                </form>
+							</tr>
+							<tr>
+								<form method="get" action="submit">
+                                <input type="hidden" name="id" value="103">
+								<td><input class="checkbox" type="checkbox" name="mon" value="1" {% if data.manual_or_not == 1 %}checked{% endif %} id="mon" onchange="if(this.checked){document.getElementById('aon').checked=false;}"/> Manual </td>
+								<td><input class="checkbox" type="checkbox" name="aon" value="1" {% if data.auto_or_not == 1 %}checked{% endif %} id="aon" onchange="if(this.checked){document.getElementById('mon').checked=false;}"/> Auto </td>
+                                <td><input type="submit" value="submit"></td>
+                                </form>
+							</tr>
+							<tr>
+                                {% if data.auto_or_not == 1 %}
+                                <form method="get" action="submit">
+                                <input type="hidden" name="id" value="104">
+								<td><input class="text-box" type="text" name="st" value="{{ data.display_scroll_seconds }}" size="2" /> Seconds</td>
+								<td><input type="submit" value="submit"></td>
+                                </form>
+                                {% endif %}
+							</tr>
+						</table>
+					</div>
+					<div class="status-block">
+						<button class="on button"> Update </button>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+		{% endblock %}

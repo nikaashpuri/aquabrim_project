@@ -49,18 +49,15 @@ function change() {
 }
             </script>
 
-<tr><td>{{ machine.id }}</td><td><a href="/machine/get/{{ machine.id }}">{{ machine.name }}</a></td><td><input type="button" class="button" value={{ machine.onStatus }} id="start_button" onclick="change();" /></td><td>{{ machine.machine_status }} %</td></tr>
+<tr>
+    <td>{{ machine.id }}</td>
+    <td><a href="/machine/get/{{ machine.id }}">{{ machine.name }}</a></td>
+    <td><input type="button" class="button" value={{ machine.onStatus }} id="start_button" onclick="change();" /></td>
+    <td>{{ machine.water_level }} %</td>
+</tr>
 {% endfor %}
 </table></p>
 
 
 
-    {% if user.is_authenticated %}
-        {% url "add-machine" as add_machine_url %}
-        <p class="what_next">{% blocktrans %}<a href="{{ add_machine_url }}" class="btn btn-primary large">add machine</a>{% endblocktrans %}</p>
-    {% else %}
-        {% url "account_login" as login_url %}
-        {% url "account_signup" as signup_url %}
-        <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
-    {% endif %}
 {% endblock %}

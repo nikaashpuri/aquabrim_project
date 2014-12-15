@@ -1,0 +1,2433 @@
+starting up on localhost port 40000 2014-12-12 07:58:09
+waiting for a connection 2014-12-12 07:58:09
+connection from ('127.0.0.1', 62766) 2014-12-12 07:59:42
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 07:59:42
+waiting for a connection 2014-12-12 07:59:42
+connection from ('127.0.0.1', 62771) 2014-12-12 08:00:36
+sent data: 111111111111111111111111000000111111111111111110 2014-12-12 08:00:36
+waiting for a connection 2014-12-12 08:00:36
+starting up on localhost port 40000 2014-12-12 08:14:37
+waiting for a connection 2014-12-12 08:14:37
+starting up on localhost port 40000 2014-12-12 08:17:53
+waiting for a connection 2014-12-12 08:17:53
+connection from ('127.0.0.1', 63026) 2014-12-12 08:21:35
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 08:21:35
+waiting for a connection 2014-12-12 08:21:35
+starting up on localhost port 40000 2014-12-12 08:23:04
+waiting for a connection 2014-12-12 08:23:04
+starting up on localhost port 40000 2014-12-12 08:27:59
+waiting for a connection 2014-12-12 08:27:59
+port is already taken, retry number 1 2014-12-12 08:28:11
+port is already taken, retry number 2 2014-12-12 08:28:11
+port is already taken, retry number 3 2014-12-12 08:28:11
+port is already taken, retry number 4 2014-12-12 08:28:11
+port is already taken, retry number 5 2014-12-12 08:28:11
+waiting for a connection 2014-12-12 08:28:11
+connection from ('127.0.0.1', 63038) 2014-12-12 08:28:39
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 08:28:39
+waiting for a connection 2014-12-12 08:28:39
+starting up on localhost port 40000 2014-12-12 08:31:12
+waiting for a connection 2014-12-12 08:31:12
+starting up on localhost port 40000 2014-12-12 08:32:10
+waiting for a connection 2014-12-12 08:32:10
+connection from ('127.0.0.1', 63273) 2014-12-12 08:35:11
+starting up on localhost port 40000 2014-12-12 08:35:40
+waiting for a connection 2014-12-12 08:35:40
+connection from ('127.0.0.1', 63279) 2014-12-12 08:35:51
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 08:35:51
+waiting for a connection 2014-12-12 08:35:51
+connection from ('127.0.0.1', 63282) 2014-12-12 08:36:03
+sent data: 111111111111111111111111000000011111111010111011101111011 2014-12-12 08:36:03
+waiting for a connection 2014-12-12 08:36:03
+starting up on localhost port 40000 2014-12-12 08:38:37
+waiting for a connection 2014-12-12 08:38:37
+connection from ('127.0.0.1', 63287) 2014-12-12 08:38:42
+Exception in tcp ip server: KeyError('111111111111111111111111',) 2014-12-12 08:38:42
+waiting for a connection 2014-12-12 08:38:42
+connection from ('127.0.0.1', 63290) 2014-12-12 08:38:57
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 08:38:57
+waiting for a connection 2014-12-12 08:38:57
+connection from ('127.0.0.1', 63293) 2014-12-12 08:39:05
+sent data: 111111111111111111111111000000011111111010111011101111011 2014-12-12 08:39:05
+waiting for a connection 2014-12-12 08:39:05
+starting up on localhost port 40000 2014-12-12 12:44:27
+waiting for a connection 2014-12-12 12:44:27
+connection from ('127.0.0.1', 49637) 2014-12-12 12:45:04
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 12:45:04
+waiting for a connection 2014-12-12 12:45:04
+connection from ('127.0.0.1', 49642) 2014-12-12 12:45:39
+sent data: 111111111111111111111111000000111111111111111110 2014-12-12 12:45:39
+waiting for a connection 2014-12-12 12:45:39
+connection from ('127.0.0.1', 49644) 2014-12-12 12:45:53
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-12 12:45:53
+waiting for a connection 2014-12-12 12:45:53
+starting up on localhost port 40000 2014-12-12 13:44:14
+waiting for a connection 2014-12-12 13:44:14
+connection from ('127.0.0.1', 50355) 2014-12-12 13:44:27
+-----------------------------------------------------
+starting up on localhost port 40000 2014-12-12 13:47:16
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-12 13:47:16
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50364) 2014-12-12 13:47:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-12 13:47:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-12 13:47:28
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 09:48:00
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 09:48:00
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 10:09:38
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:09:38
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49640) 2014-12-13 10:09:52
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:09:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:09:52
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49655) 2014-12-13 10:10:58
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:10:58
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:10:58
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 10:15:38
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:15:38
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49692) 2014-12-13 10:15:58
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:15:58
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:15:58
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 10:23:04
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:23:04
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49735) 2014-12-13 10:23:10
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:23:10
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:23:10
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49740) 2014-12-13 10:23:15
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:23:15
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:23:15
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49745) 2014-12-13 10:23:17
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:23:17
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:23:17
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49751) 2014-12-13 10:23:24
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:23:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:23:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49757) 2014-12-13 10:23:27
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:23:27
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:23:27
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49774) 2014-12-13 10:24:21
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:24:21
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:24:21
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49779) 2014-12-13 10:24:23
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:24:23
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:24:23
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49794) 2014-12-13 10:25:29
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:25:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:25:29
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49799) 2014-12-13 10:25:32
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:25:32
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:25:32
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49807) 2014-12-13 10:26:41
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:26:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:26:41
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49813) 2014-12-13 10:27:05
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:27:05
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:27:05
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49821) 2014-12-13 10:27:24
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:27:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:27:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49829) 2014-12-13 10:28:00
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:28:00
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:28:00
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49846) 2014-12-13 10:29:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:29:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:29:28
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 49852) 2014-12-13 10:29:36
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:29:36
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:29:36
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 10:48:36
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:48:36
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50133) 2014-12-13 10:48:46
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:48:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:48:46
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50139) 2014-12-13 10:48:54
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:48:54
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:48:54
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50145) 2014-12-13 10:49:00
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 10:49:00
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 10:49:00
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:00:08
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:00:08
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50186) 2014-12-13 11:00:20
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:00:20
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:00:20
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50198) 2014-12-13 11:00:45
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:00:45
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:00:45
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:21:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:21:46
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50264) 2014-12-13 11:21:51
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:21:51
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:21:51
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50276) 2014-12-13 11:23:05
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:23:05
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:23:05
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50282) 2014-12-13 11:23:10
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:23:10
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:23:10
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50288) 2014-12-13 11:23:18
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:23:18
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:23:19
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:45:00
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:45:00
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50422) 2014-12-13 11:45:04
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:45:04
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:45:04
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:48:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:48:41
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50472) 2014-12-13 11:48:47
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:48:47
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:48:47
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50476) 2014-12-13 11:48:54
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:48:54
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:48:54
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50495) 2014-12-13 11:49:41
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:49:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:49:41
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:54:40
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:54:40
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:56:40
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:56:40
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 11:58:03
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:58:03
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50535) 2014-12-13 11:58:14
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:58:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:58:14
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50544) 2014-12-13 11:58:51
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 11:58:51
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 11:58:51
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:00:59
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:00:59
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50550) 2014-12-13 12:01:02
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:01:02
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:01:02
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50560) 2014-12-13 12:01:06
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:01:06
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:01:06
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50565) 2014-12-13 12:01:11
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:01:11
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:01:11
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50571) 2014-12-13 12:01:16
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:01:16
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:01:16
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50577) 2014-12-13 12:01:24
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:01:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:01:24
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:02:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:02:43
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50590) 2014-12-13 12:02:49
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:02:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:02:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50596) 2014-12-13 12:03:52
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:03:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:03:52
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50602) 2014-12-13 12:04:59
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:04:59
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:04:59
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50609) 2014-12-13 12:05:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:05:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:05:28
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:06:48
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:06:48
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50623) 2014-12-13 12:06:51
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:06:51
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:06:51
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:47:08
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:47:08
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:48:12
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:48:12
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50690) 2014-12-13 12:48:24
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:48:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:48:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50696) 2014-12-13 12:48:41
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:48:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:48:41
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:50:42
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:50:42
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50710) 2014-12-13 12:50:44
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:50:44
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:50:44
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50716) 2014-12-13 12:50:50
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:50:50
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:50:50
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 12:52:33
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:52:33
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50730) 2014-12-13 12:52:37
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:52:37
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:52:37
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50735) 2014-12-13 12:52:39
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:52:39
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:52:39
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 50741) 2014-12-13 12:52:44
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 12:52:44
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 12:52:44
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 13:54:18
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 13:54:18
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51107) 2014-12-13 13:54:26
+----------------------------------------------------------------------------------------------------------
+stored the connection for future use... '111111111111111111111111000000111111111111111111' 2014-12-13 13:54:26
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 13:54:26
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51110) 2014-12-13 13:54:44
+----------------------------------------------------------------------------------------------------------
+sent data: 1111111111111111111111110000100010010100011110010 2014-12-13 13:54:44
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 13:54:44
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51185) 2014-12-13 13:59:49
+----------------------------------------------------------------------------------------------------------
+sent data: 1111111111111111111111110000100010010100011110010 2014-12-13 13:59:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 13:59:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51197) 2014-12-13 14:00:48
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection.sendall(string_to_send)
+!!   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! error: [Errno 32] Broken pipe
+ 2014-12-13 14:00:48
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:00:48
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51209) 2014-12-13 14:01:56
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection.sendall(string_to_send)
+!!   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! error: [Errno 32] Broken pipe
+ 2014-12-13 14:01:56
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:01:56
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51232) 2014-12-13 14:02:10
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection.sendall(string_to_send)
+!!   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! error: [Errno 32] Broken pipe
+ 2014-12-13 14:02:10
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:02:10
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51242) 2014-12-13 14:02:20
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection.sendall(string_to_send)
+!!   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! error: [Errno 32] Broken pipe
+ 2014-12-13 14:02:20
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:02:20
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51261) 2014-12-13 14:03:26
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection.sendall(string_to_send)
+!!   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! error: [Errno 32] Broken pipe
+ 2014-12-13 14:03:26
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:03:26
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 14:08:03
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:08:03
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51328) 2014-12-13 14:08:08
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:08:08
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:08:08
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51333) 2014-12-13 14:08:12
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:08:12
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:08:12
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51338) 2014-12-13 14:08:15
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:08:15
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:08:15
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51344) 2014-12-13 14:08:43
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:08:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:08:43
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51350) 2014-12-13 14:08:46
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:08:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:08:46
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 14:09:56
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:09:56
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51372) 2014-12-13 14:10:02
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:10:02
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:10:02
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51378) 2014-12-13 14:10:07
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:10:07
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:10:07
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51383) 2014-12-13 14:10:10
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:10:10
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:10:10
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-13 14:15:35
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:35
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51396) 2014-12-13 14:15:40
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:15:40
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:40
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51401) 2014-12-13 14:15:43
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:15:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:43
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51407) 2014-12-13 14:15:49
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:15:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51412) 2014-12-13 14:15:53
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:15:53
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:53
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51417) 2014-12-13 14:15:55
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:15:55
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:55
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51422) 2014-12-13 14:15:58
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:15:58
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:15:58
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51427) 2014-12-13 14:16:00
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:16:00
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:16:00
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51445) 2014-12-13 14:16:45
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:16:45
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:16:45
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51451) 2014-12-13 14:16:48
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:16:48
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:16:48
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 51456) 2014-12-13 14:16:52
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-13 14:16:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-13 14:16:52
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:21:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:21:41
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53442) 2014-12-14 06:21:49
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:21:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:21:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53447) 2014-12-14 06:21:52
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:21:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:21:52
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53467) 2014-12-14 06:24:43
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:24:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:24:43
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:36:42
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:36:42
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53520) 2014-12-14 06:36:47
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:36:47
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:36:47
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53525) 2014-12-14 06:36:49
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:36:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:36:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53543) 2014-12-14 06:38:14
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:38:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:38:14
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:40:36
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:40:36
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53573) 2014-12-14 06:40:40
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:40:40
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:40:40
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:41:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:41:52
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53586) 2014-12-14 06:41:57
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:41:57
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:41:57
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:42:47
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:42:47
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53598) 2014-12-14 06:42:52
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:42:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:42:52
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53603) 2014-12-14 06:42:54
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:42:54
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:42:54
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:45:19
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:45:19
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53618) 2014-12-14 06:45:23
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:45:23
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:45:23
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53623) 2014-12-14 06:45:38
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:45:38
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:45:38
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 1 2014-12-14 06:48:15
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 2 2014-12-14 06:48:15
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 3 2014-12-14 06:48:15
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 4 2014-12-14 06:48:15
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 5 2014-12-14 06:48:15
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:48:15
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53636) 2014-12-14 06:48:16
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:48:16
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:48:16
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 06:49:18
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:49:18
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53642) 2014-12-14 06:49:25
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:49:25
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:49:25
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53653) 2014-12-14 06:50:01
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:50:01
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:50:01
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53658) 2014-12-14 06:50:08
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 06:50:08
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 06:50:08
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 07:00:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:00:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53701) 2014-12-14 07:00:50
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 07:00:50
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:00:50
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53718) 2014-12-14 07:05:37
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 07:05:37
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:05:37
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 07:07:53
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:07:53
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53756) 2014-12-14 07:07:56
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 07:07:56
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:07:56
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 07:41:06
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:41:06
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53970) 2014-12-14 07:41:13
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 07:41:13
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:41:13
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 07:41:50
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:41:50
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 53979) 2014-12-14 07:41:54
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 07:41:54
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:41:54
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54220) 2014-12-14 07:57:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 07:57:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 07:57:28
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54231) 2014-12-14 08:00:45
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:00:45
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:00:45
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54242) 2014-12-14 08:01:20
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:01:20
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:01:20
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54248) 2014-12-14 08:01:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:01:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:01:28
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54252) 2014-12-14 08:01:44
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:01:44
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:01:44
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 08:30:26
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:30:26
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54373) 2014-12-14 08:31:14
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:31:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:31:14
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54378) 2014-12-14 08:31:16
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:31:16
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:31:16
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54383) 2014-12-14 08:31:19
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:31:19
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:31:19
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54393) 2014-12-14 08:31:37
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:31:37
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:31:37
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 08:38:27
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:38:27
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54430) 2014-12-14 08:38:31
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:38:31
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:38:31
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54434) 2014-12-14 08:38:46
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 08:38:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 08:38:46
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 09:02:15
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:02:15
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54736) 2014-12-14 09:02:20
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:02:20
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:02:20
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54740) 2014-12-14 09:02:23
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:02:23
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:02:23
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54784) 2014-12-14 09:22:12
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:22:12
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:22:12
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54789) 2014-12-14 09:22:14
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:22:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:22:14
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54799) 2014-12-14 09:28:24
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:28:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:28:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54805) 2014-12-14 09:29:34
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:29:34
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:29:34
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54809) 2014-12-14 09:29:44
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:29:44
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:29:44
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 54816) 2014-12-14 09:29:57
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 09:29:57
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 09:29:57
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-14 10:23:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:23:41
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55160) 2014-12-14 10:23:58
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:23:58
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:23:58
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55164) 2014-12-14 10:24:30
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:24:30
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:24:30
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55171) 2014-12-14 10:25:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:25:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:25:28
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55177) 2014-12-14 10:25:59
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:25:59
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:25:59
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55181) 2014-12-14 10:26:02
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:26:02
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:26:02
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55186) 2014-12-14 10:26:15
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:26:15
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:26:15
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55207) 2014-12-14 10:28:17
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:28:17
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:28:17
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55212) 2014-12-14 10:28:20
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:28:20
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:28:20
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55296) 2014-12-14 10:42:07
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:42:07
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:42:07
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55306) 2014-12-14 10:43:17
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:43:17
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:43:17
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55316) 2014-12-14 10:43:53
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 76, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-14 10:43:53
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-14 10:43:53
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:42:57
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:42:57
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55534) 2014-12-15 02:43:27
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 75, in <module>
+    write_to_file('*********** SENT DATA: ' + string_to_send + '*****************')
+!! NameError: name 'string_to_send' is not defined
+ 2014-12-15 02:43:27
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:43:27
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:44:30
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:44:30
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55540) 2014-12-15 02:44:34
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111000010010100001110000011***************** 2014-12-15 02:44:34
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:44:34
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:44:34
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:46:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:46:43
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55546) 2014-12-15 02:46:46
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:46:46
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:46:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:46:46
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55553) 2014-12-15 02:48:17
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01000100--10011000100101100***************** 2014-12-15 02:48:17
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:48:17
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:48:17
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55560) 2014-12-15 02:50:02
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01010010--0000100100110***************** 2014-12-15 02:50:02
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:50:02
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:50:02
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:52:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:52:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55575) 2014-12-15 02:52:52
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:52:52
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:52:52
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:52:52
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:53:22
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:53:22
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55580) 2014-12-15 02:53:26
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:53:26
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:53:26
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:53:26
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:54:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:54:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55585) 2014-12-15 02:54:25
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:54:25
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:54:25
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:54:25
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:55:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:55:14
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55590) 2014-12-15 02:55:16
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:55:16
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:55:16
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:55:16
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:56:05
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:56:05
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55595) 2014-12-15 02:56:10
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:56:10
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 77, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:56:10
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:56:10
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:56:57
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:56:57
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55600) 2014-12-15 02:56:58
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:56:58
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:56:58
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:56:58
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:57:27
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:57:27
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55605) 2014-12-15 02:57:29
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--11111000--01001010--0001110000011***************** 2014-12-15 02:57:29
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:57:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:57:29
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 02:58:22
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:58:22
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55610) 2014-12-15 02:58:31
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--01000011--10000011***************** 2014-12-15 02:58:31
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 02:58:31
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 02:58:31
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55615) 2014-12-15 04:12:36
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--01000011--10000011***************** 2014-12-15 04:12:36
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:12:36
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:12:36
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:17:12
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:17:12
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55621) 2014-12-15 04:17:14
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--01000011--10000011***************** 2014-12-15 04:17:14
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:17:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:17:14
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55627) 2014-12-15 04:18:18
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--01000011--10000011***************** 2014-12-15 04:18:18
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:18:18
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:18:18
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:22:20
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:22:20
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55632) 2014-12-15 04:22:28
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--10100011--00000011***************** 2014-12-15 04:22:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:22:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:22:28
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55637) 2014-12-15 04:23:16
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--11000011--00000011***************** 2014-12-15 04:23:16
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:23:16
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:23:16
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:24:11
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:24:11
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55653) 2014-12-15 04:24:14
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001001--10000011--00000011***************** 2014-12-15 04:24:14
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:24:14
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:24:14
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:27:42
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:27:42
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55658) 2014-12-15 04:27:55
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001010--00000001--00011111***************** 2014-12-15 04:27:55
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:27:55
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:27:55
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:38:00
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:38:00
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55669) 2014-12-15 04:38:12
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001011--01100011--00000011***************** 2014-12-15 04:38:12
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:38:12
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:38:12
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:43:51
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:43:51
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55677) 2014-12-15 04:44:02
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000101--01010001--00000011***************** 2014-12-15 04:44:02
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:44:02
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:44:02
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55682) 2014-12-15 04:44:47
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000101--01000001--00000011***************** 2014-12-15 04:44:47
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:44:47
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:44:47
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:48:57
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:48:57
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55709) 2014-12-15 04:49:51
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000011--11111111--10111111***************** 2014-12-15 04:49:51
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:49:51
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:49:51
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55714) 2014-12-15 04:50:50
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000011--11111110--00111111***************** 2014-12-15 04:50:50
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:50:50
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:50:50
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:51:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:51:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55724) 2014-12-15 04:51:28
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000011--11111110--00111111***************** 2014-12-15 04:51:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:51:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:51:28
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:53:42
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:53:42
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 04:54:24
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:54:24
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 55735) 2014-12-15 04:54:29
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000011--11111111--00111111***************** 2014-12-15 04:54:29
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 04:54:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 04:54:29
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 1 2014-12-15 05:18:03
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 2 2014-12-15 05:18:03
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 3 2014-12-15 05:18:03
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 4 2014-12-15 05:18:03
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 5 2014-12-15 05:18:03
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:18:03
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56259) 2014-12-15 05:18:06
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--00011000--00000010***************** 2014-12-15 05:18:06
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:18:06
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:18:06
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56263) 2014-12-15 05:18:17
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--00010010--00000010***************** 2014-12-15 05:18:17
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:18:17
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:18:17
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 05:31:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:31:29
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56268) 2014-12-15 05:31:33
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001000--00101000--0100101111***************** 2014-12-15 05:31:33
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:31:33
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:31:33
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 05:32:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:32:29
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56274) 2014-12-15 05:32:32
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001000--00101000--0100101111***************** 2014-12-15 05:32:32
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:32:32
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:32:32
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56297) 2014-12-15 05:34:43
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001000--00101101--000101111***************** 2014-12-15 05:34:43
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:34:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:34:43
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 05:47:55
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:47:55
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 1 2014-12-15 05:49:29
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 2 2014-12-15 05:49:29
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 3 2014-12-15 05:49:29
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 4 2014-12-15 05:49:29
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 5 2014-12-15 05:49:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:49:29
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56316) 2014-12-15 05:49:31
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--00010011--00b11110***************** 2014-12-15 05:49:31
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:49:31
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:49:31
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 05:51:02
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:51:02
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56322) 2014-12-15 05:51:06
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--00010011--00b11110***************** 2014-12-15 05:51:06
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:51:06
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:51:06
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 05:51:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:51:41
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56327) 2014-12-15 05:51:43
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--00010011--00000101***************** 2014-12-15 05:51:43
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:51:43
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:51:43
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56337) 2014-12-15 05:54:11
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--10010010--00000101***************** 2014-12-15 05:54:11
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:54:11
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:54:11
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 05:55:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:55:46
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56342) 2014-12-15 05:55:49
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--10010011--00000101***************** 2014-12-15 05:55:49
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:55:49
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:55:49
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56346) 2014-12-15 05:55:55
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--10110011--00000101***************** 2014-12-15 05:55:55
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:55:55
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:55:55
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56356) 2014-12-15 05:58:29
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001000--00101101--00101111***************** 2014-12-15 05:58:29
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 05:58:29
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 05:58:29
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 06:03:46
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:03:46
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56362) 2014-12-15 06:04:12
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--01000010--00100101***************** 2014-12-15 06:04:12
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:04:12
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:04:12
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 06:06:50
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:06:50
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56368) 2014-12-15 06:06:59
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--01000010--00110101***************** 2014-12-15 06:06:59
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:06:59
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:06:59
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56373) 2014-12-15 06:07:45
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--01000010--00111001***************** 2014-12-15 06:07:45
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:07:45
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:07:45
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 06:10:01
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:10:01
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56384) 2014-12-15 06:10:38
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000111--10110101--00000101***************** 2014-12-15 06:10:38
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:10:38
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:10:38
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 1 2014-12-15 06:12:35
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 2 2014-12-15 06:12:35
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 3 2014-12-15 06:12:35
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 4 2014-12-15 06:12:35
+----------------------------------------------------------------------------------------------------------
+port is already taken, retry number 5 2014-12-15 06:12:35
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:12:35
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56396) 2014-12-15 06:12:41
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--10000010--00111001***************** 2014-12-15 06:12:41
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:12:41
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:12:41
+----------------------------------------------------------------------------------------------------------
+starting up on localhost port 40000 2014-12-15 06:17:44
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:17:44
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56402) 2014-12-15 06:17:51
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00001110--01101001--00111001***************** 2014-12-15 06:17:51
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:17:51
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:17:51
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56406) 2014-12-15 06:17:59
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--10000010--00111011***************** 2014-12-15 06:17:59
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:17:59
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:17:59
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56411) 2014-12-15 06:18:09
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--10000010--00111010***************** 2014-12-15 06:18:09
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:18:09
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:18:09
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56416) 2014-12-15 06:18:19
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--10000010--00111001***************** 2014-12-15 06:18:19
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:18:19
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:18:19
+----------------------------------------------------------------------------------------------------------
+connection from ('127.0.0.1', 56421) 2014-12-15 06:18:28
+----------------------------------------------------------------------------------------------------------
+*********** SENT DATA: 111111111111111111111111--00000110--10000010--00111000***************** 2014-12-15 06:18:28
+----------------------------------------------------------------------------------------------------------
+Exception in tcp ip server: 
+!! Traceback (most recent call last):
+!!   File "/Users/nikaashpuri/Documents/alibi_projects/aquabrim_project/machine/tcp_ip_server.py", line 78, in <module>
+    connection = dict_device_id_to_connection[string_to_send[:24]]
+!! KeyError: '111111111111111111111111'
+ 2014-12-15 06:18:28
+----------------------------------------------------------------------------------------------------------
+waiting for a connection 2014-12-15 06:18:28
+-----------------------------------------------------

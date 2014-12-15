@@ -19,7 +19,7 @@ class Transmitter(models.Model):
 
 class Controller(models.Model):
     user = models.ForeignKey(User)
-    device_id = models.CharField(max_length = 100, unique=True)
+    device_id = models.CharField(max_length = 100)
     timestamp = models.DateTimeField()
     motor_status = models.IntegerField(max_length = 10)
     signal_status = models.CharField(max_length = 10)
@@ -80,9 +80,35 @@ class Controller(models.Model):
     timer_based = models.IntegerField(max_length=100)
     trial_period = models.IntegerField(max_length=100)
     m = models.IntegerField(max_length=100)
-    
 
+    # some more added for demo purpose
+    license_type = models.CharField(max_length=100)
+    select_motor = models.CharField(max_length=100)
+    max_motor_on = models.CharField(max_length=100)
 
+    full_water_level = models.IntegerField(max_length=100)
+    low_water_level = models.IntegerField(max_length=100)
+    display = models.IntegerField(max_length=10)
+
+    comm_error_alarm = models.IntegerField(max_length=10)
+    line_water_alarm = models.IntegerField(max_length=10)
+
+    max_duration_hours = models.IntegerField(max_length=100)
+    max_duration_minutes = models.IntegerField(max_length=100)
+
+    graphical_or_not = models.IntegerField(max_length=100)
+    numerical_or_not = models.IntegerField(max_length=100)
+    manual_or_not = models.IntegerField(max_length=100)
+    auto_or_not = models.IntegerField(max_length=100)
+    display_scroll_seconds = models.IntegerField(max_length=100)
+
+    timer_days = models.CharField(max_length=100)
+
+    master_week_days = models.IntegerField(max_length=100)
+    master_hours = models.IntegerField(max_length=100)
+    master_minutes = models.IntegerField(max_length=100)
+
+    reset_interval = models.IntegerField(max_length=100)
 
 class Command(models.Model):
     name = models.CharField(max_length = 100)
