@@ -3,6 +3,7 @@
 
 
 			<div class="middle-container">
+                <!--
 				<div class="left-sidebar">
 					<h2 class="heading">Tanks</h2>
 					<ul class="left-navigation">
@@ -16,6 +17,7 @@
                         {% endfor %}
 						</ul>
 				</div>
+				-->
 				<div class="content">
 					<div class="table-data-container">
 						<table width="100%" border="1" cellspacing="0" cellpadding="0" class="table-data" id="gridLevelTankLevel">
@@ -25,9 +27,9 @@
 							<th class="heading" width="40%" style="background: #000000;">Present Water Level</th>
 							<th class="heading" width="20%" style="background: #000000;">Full Level</th>
                         	<th class="heading" width="4%" style="font-size: 10px;background: #000000;">Over Flow&nbsp;&nbsp;</th>
-							<th class="heading" width="4%" style="font-size: 10px;background: #000000;">&nbsp;Sump Low&nbsp;</th>
+							<!-- <th class="heading" width="4%" style="font-size: 10px;background: #000000;">&nbsp;Sump Low&nbsp;</th> -->
                             <th class="heading" width="4%" style="font-size: 10px;background: #000000;">No Signal</th>
-							<th class="heading" width="4%" style="font-size: 10px;background: #000000;">Low Level&nbsp;</th>
+							<!--<th class="heading" width="4%" style="font-size: 10px;background: #000000;">Low Level&nbsp;</th> -->
 
 
                         {% for data in list_of_tanks %}
@@ -37,9 +39,9 @@
 								<td class="second"><span class="gradient grid-tank-level" fillgridto="{{ data.water_level }}%">&nbsp;</span>{{ data.water_level }}%</td>
 								<td class="third"><span class="grid-tank-level" fillgridto="{{ data.full_water_level }}">&nbsp;</span>{{ data.full_water_level }}%</td>
                                 <td {% if data.overflow_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td>
-                                <td {% if data.no_signal_alarm_sump == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <!-- <td {% if data.no_signal_alarm_sump == 1%}class="active blink" style="background: orange;"{% endif %}></td> -->
                                 <td {% if data.no_signal_alarm_top == 1%}class="active blink" style="background: orange;"{% endif %}></td>
-                                <td {% if data.low_level_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <!-- <td {% if data.low_level_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td> -->
 
                         	</tr>
                         {% endfor %}
@@ -51,7 +53,7 @@
                         <input type="hidden" name="id" value="13">
                             {% if data.onoff == 1%}
                                 <input type="hidden" name="onoff" value="0">
-                                <input type="submit" value="ON" style="background: red; color: #ffffff;">
+                                <input type="submit" value="ON" style="background: red; color: #ffffff; width: 4em; height: 4em;">
                                 &nbsp;&nbsp;
 						    <br>
                                 <span>
@@ -63,7 +65,7 @@
                             {% endif %}
                             {% if data.onoff == 0%}
                                 <input type="hidden" name="onoff" value="1">
-                                <input type="submit" value="OFF" style="background: green; color: #ffffff;">
+                                <input type="submit" value="OFF" style="background: green; color: #ffffff;  width: 4em; height: 4em;">
                             &nbsp;&nbsp;
                                 <br>
 						    <span>
@@ -74,17 +76,35 @@
 
 					</div>
 				</div>
-				<div class="right-sidebar">
-					<h2 class="heading">ALARM</h2>
+				<div class="right-sidebar" style="border: none;">
+					<h2 class="heading" style="width: 200%; border: none; background: #000000; height: 62px; color: #ffffff;">Controller Alarms and Information</h2>
 					<ul class="right-navigation">
-                        <li><br></li>
-						<li {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">High Volt</a></li>
-						<li {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">Low Volt</a></li>
-						<li {% if data.timeout_alarm == 1%}class="active blink"{% endif %}><a href="">Time Out</a></li>
-						<li {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}><a href="">Comm. Error</a></li>
-						<li {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}><a href="">Flow Error</a></li>
-						<li {% if data.line_water_alarm == 1%}class="active blink"{% endif %}><a href="">Line Water</a></li>
-					</ul>
+                    <li>
+                    <table width="200%" border="1" style="height: 338px; background: #CCCCCC">
+                        <tr>
+                            <td {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}>High Volt</td>
+                            <td>VOLTAGE: {{ data.voltage }}V</td>
+                        </tr>
+                        <tr>
+                            <td {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}>Low Volt</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td {% if data.timeout_alarm == 1%}class="active blink"{% endif %}>Timeout</td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}>Comm Error</td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}>FLow Error</td>
+                            <td></td>
+                        </tr>
+
+                    </table>
+                    </li>
+                    </ul>
 				</div>
 				<div class="clear"></div>
 			</div>

@@ -4,9 +4,9 @@
 		<div class="container">
 
 			<div class="middle-container">
-				<div class="left-sidebar">
-					<h2 class="heading">Setting</h2>
-					<ul class="left-navigation">
+				<div class="left-sidebar" style="border: none;">
+					<h2 class="heading" style="width: 175px;">Setting</h2>
+					<ul class="left-navigation" style="font-size: 10px; width: 175px;">
 						<li><a href="">High Volt (Volt)</a></li>
 						<li><a href="">Low Volt (Volt)</a></li>
 						<li><a href="">Time Out (Min)</a></li>
@@ -21,15 +21,15 @@
 						<li><a href="">Max Motor On Time</a></li>
 					</ul>
 				</div>
-				<div class="content">
+				<div class="content" style="margin-left: 75px;">
 					<div class="table-data-container">
 						<table width="40%" cellspacing="0" cellpadding="0" class="table-data controller-setting">
 							<th class="heading">Value</th>
-							<th class="heading">Alarm</th>
+							<th class="heading">Protection</th>
 							<tr>
 								<form method="get" action="submit">
                                     <input type="hidden" name="id" value="8" />
-                                    <td><input name="high" type="number" value="{{ data.high_voltage_point }}" size="2" min="240"/></td>
+                                    <td><input name="high" type="number" value="{{ data.high_voltage_point }}" size="2" min="240" max="500"/></td>
                                     <td><input class="checkbox" type="checkbox" name="hvp" value="1" {% if data.high_volt_protection == 1%}checked{% endif %} /> </td>
                                     <td><input type="submit" value="submit" /> </td>
                                 </form>
@@ -68,7 +68,7 @@
 							<tr>
 								<form method="get" action="submit">
                                     <input type="hidden" name="id" value="6" />
-                                    <td><input name="tg" type="number" value="{{ data.trial_gap }}" size="2" min="8" max="53"/></td>
+                                    <td><input name="tg" type="number" value="{{ data.trial_gap }}" size="2" min="{{ data.restart_delay }}" max="{{ data.restart_delay|add:"48" }}"/></td>
                                     <td><input type="submit" value="submit" /> </td>
                                 </form>
 							</tr>

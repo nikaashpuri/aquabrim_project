@@ -6,9 +6,9 @@
 			<div class="middle-container no-right">
 				<div class="left-sidebar">
 					<h2 class="heading">Tanks</h2>
-					<ul class="left-navigation">
+					<ul class="left-navigation" style="font-size: 10px;">
                         {% for tank in list_of_tanks %}
-						<li class="active"><a href="">{{ tank.name }}</a></li>
+						<li class="active"><a href="">{{ tank.name }}(sid {{ tank.sub_ID }})</a></li>
                         {% endfor %}
 					</ul>
 				</div>
@@ -16,9 +16,9 @@
 					<div class="table-data-container">
 						<table width="100%" cellspacing="0" cellpadding="0" class="table-data tank-setting">
 							<th class="heading">Type</th>
-							<th class="heading">Full Level</th>
+							<th class="heading">Full Level (%)</th>
                             <th class="heading">&nbsp;</th>
-							<th class="heading">Low Level</th>
+							<th class="heading">Low Level (%)</th>
                         <th class="heading">&nbsp;</th>
 							<th class="heading" width="20%">Alarm <br/> 
 								<span class="alarm-low alarm">Low</span>
@@ -33,15 +33,17 @@
                                 <td>Dest. Tank</td>
 								<form method="get" action="submit">
                                     <input type="hidden" name="id" value="5">
-                                    <input type="hidden" name="water_type" value="0">
+                                    <input type="hidden" name="water_type" value="1">
+                                    <input type="hidden" name="sub_id" value="{{ data.sub_ID }}">
 
-                                <td><input class="text-box" type="text" name="water" value="{{ data.full_water_level }}" size="2" /> %</td>
+                                <td><input type="number" name="water" value="{{ data.full_water_level }}" size="2" min="51" max="100" style="width: 50px;" /></td>
 								<td><input type="submit" value="submit"></td>
                                 </form>
                                 <form method="get" action="submit">
                                     <input type="hidden" name="id" value="5">
-                                    <input type="hidden" name="water_type" value="1">
-                                <td><input class="text-box" type="text" name="water" value="{{ data.low_water_level }}" size="2" /> %</td>
+                                    <input type="hidden" name="water_type" value="0">
+                                    <input type="hidden" name="sub_id" value="{{ data.sub_ID }}">
+                                <td><input type="number" name="water" value="{{ data.low_water_level }}" size="2" min="5" max="50" style="width: 50px;"/></td>
                                 <td><input type="submit" value="submit"></td>
                                 </form>
 

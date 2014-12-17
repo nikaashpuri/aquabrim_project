@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>administrator panel</title>
+</head>
+
+<body>
+<h1>CONTROLLER ID: {{ data.device_id }}</h1>
+    {% for tank in list_of_tanks %}
+        <h2>TANK NAME: {{ tank.name }}, SUB ID: {{ tank.sub_ID }}</h2>
+        <hr>
+        <h3>Transmitter Data Enabling</h3>
+        <hr>
+        <form action="submit" method="get">
+            <input type="hidden" name="sub_id" value="{{ tank.sub_ID }}"/><br />
+            <input type="hidden" value="3" name="id"><br/>
+
+            Flow Protection: <input type="number" min="0" max="1" name="fp" value="{{ tank.flow_protection }}"><br />
+            Enable/Disable: <input type="number" min="0" max="1" name="End" value="{{ tank.enable_disable }}"><br />
+            No signal duration: <input type="number" min="0" max="31" name="nsd" value="{{ tank.no_signal_duration }}"><br>
+            <input type="submit" value="submit"/>
+        </form>
+        <h3>Motor Trigger Setting</h3>
+        <hr>
+        <form action="submit" method="get">
+            <input type="hidden" name="sub_id" value="{{ tank.sub_ID }}"/><br />
+            <input type="hidden" value="5" name="id"><br/>
+            Type of Tx:
+            <select name="tx_type">
+                <option value="0" {% if tank.Tx_type == 0 %}selected{% endif %}>SUMP</option>
+                <option value="1" {% if tank.Tx_type == 1 %}selected{% endif %}>TOP</option>
+                <option value="2" {% if tank.Tx_type == 2 %}selected{% endif %}>LINE</option>
+            </select><br>
+
+            Offset Level for reset: <input type="number" min="0" max="15" name="offset" value="{{ tank.offset_level_reset }}"><br />
+
+            <input type="submit" value="submit"/>
+        </form>
+    {% endfor %}
+    
+</body>
+</html>
