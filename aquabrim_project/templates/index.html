@@ -46,6 +46,7 @@
                         	</tr>
                         {% endfor %}
 						</table>
+                    <div style="padding: 10px; margin-top:20px; font-size: 20px; color: #ffffff;">LAST UPDATE DATE: {{ data.last_update }}</div>
 					</div>
 					<div class="status-block" style="font-size: 20px;">
 						<form method="get" action="submit">
@@ -69,8 +70,10 @@
                             &nbsp;&nbsp;
                                 <br>
 						    <span>
-							Motor is off
-						</span>
+							Motor has been off for: <span style="color: red;">2 Hours
+							&nbsp;
+							21 Min</span>
+                                </span>
                             {% endif %}
                         </form>
 
@@ -80,26 +83,26 @@
 					<h2 class="heading" style="width: 200%; border: none; background: #000000; height: 62px; color: #ffffff;">Controller Alarms and Information</h2>
 					<ul class="right-navigation">
                     <li>
-                    <table width="200%" border="1" style="height: 338px; background: #CCCCCC">
+                    <table width="200%" border="1" style="font-size:10px; height: 338px; background: #CCCCCC">
                         <tr>
                             <td {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}>High Volt</td>
-                            <td>VOLTAGE: {{ data.voltage }}V</td>
+                            <td>VOLTAGE X: {{ data.voltage }}V</td>
                         </tr>
                         <tr>
                             <td {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}>Low Volt</td>
-                            <td></td>
+                            <td>VOLTAGE Y: {{ data.voltage_y }}V</td>
                         </tr>
                         <tr>
                             <td {% if data.timeout_alarm == 1%}class="active blink"{% endif %}>Timeout</td>
-                            <td></td>
+                            <td>VOLTAGE Z: {{ data.voltage_z }}V</td>
                         </tr>
                     <tr>
                             <td {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}>Comm Error</td>
-                            <td></td>
+                            <td>CURRENT: {{ data.current }}A</td>
                         </tr>
                     <tr>
                             <td {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}>FLow Error</td>
-                            <td></td>
+                            <td>POWER FACTOR {{ data.power_factor }}</td>
                         </tr>
 
                     </table>

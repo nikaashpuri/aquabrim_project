@@ -110,6 +110,15 @@ class Controller(models.Model):
 
     reset_interval = models.IntegerField(max_length=100)
 
+    voltage_y = models.IntegerField(max_length=100)
+    voltage_z = models.IntegerField(max_length=100)
+    power_factor = models.FloatField()
+    current = models.FloatField()
+
+    last_update = models.DateTimeField()
+
+
+
 class Command(models.Model):
     name = models.CharField(max_length = 100)
     electronic_format = models.TextField()

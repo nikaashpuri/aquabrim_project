@@ -16,7 +16,8 @@ import sys
 import socket
 import datetime
 import file_locations_and_constants
-
+from django.utils.timezone import now
+from datetime import timedelta
 
 def list_change(request):
     on = int(request.GET.get('onoff', 0))
@@ -236,8 +237,11 @@ def submitData(request, data_id):
         offset_level_reset = request.GET.get('offset')
         controller.offset_level_reset = offset_level_reset
 
-        water_level_type = 1
-        water_level = controller.full_water_level
+        water_level_type = request.GET.get('water_level_type')
+        if int(water_level_type == 1):
+            water_level = controller.full_water_level
+        else:
+            water_level = controller.low_water_level
 
         Controller.objects.all().filter(device_id=controller.device_id)\
             .update(Tx_type=Tx_type,
@@ -287,14 +291,23 @@ def submitDataUIDisplay(request, data_id):
 
 def submitDataFromUserInterface(request, data_id):
 
+
+    main_controller = Controller.objects.get(id=data_id)
+
+    Controller.objects.all()\
+            .filter(device_id=main_controller.device_id)\
+            .update(last_update=now() + timedelta(hours=5.5))
+
+
     if request.GET.has_key('sub_id'):
 
-        main_controller = Controller.objects.get(id=data_id)
         controller = Controller.objects.get(device_id=main_controller.device_id,
                                             sub_ID=request.GET.get('sub_id'))
 
     else:
         controller = Controller.objects.get(id=data_id)
+
+
 
     command_id = int(request.GET.get('id'))
     idno = controller.device_id
