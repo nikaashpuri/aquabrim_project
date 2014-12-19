@@ -147,3 +147,38 @@ class Timer(models.Model):
 
     class Meta:
         app_label = 'machine'
+
+
+class Tank(models.Model):
+    controller = models.ForeignKey(Controller)
+    name = models.CharField(max_length=100)
+
+    #newly added!!!
+    sub_ID = models.CharField(max_length=100)
+
+    motor_trigger = models.IntegerField(max_length=100)
+
+
+    low_level_alarm = models.IntegerField(max_length=100)
+    full_level_alarm = models.IntegerField(max_length=100)
+    overflow_alarm = models.IntegerField(max_length=100)
+    current_overflow_status = models.IntegerField(max_length=100)
+    no_signal_alarm = models.IntegerField(max_length=100)
+
+    water_level = models.IntegerField(max_length=100)
+    offset_level_reset = models.IntegerField(max_length=100)
+    water_level_type = models.IntegerField(max_length=100)
+
+
+    full_water_level = models.IntegerField(max_length=100)
+    low_water_level = models.IntegerField(max_length=100)
+    display = models.IntegerField(max_length=10)
+
+
+    last_update = models.DateTimeField()
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        app_label = 'machine'

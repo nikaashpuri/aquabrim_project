@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% load staticfiles%}
+    {% load machine_extras %}
 	<body>
 		<div class="container">
 
@@ -16,7 +17,7 @@
                         {% endfor %}
 					</ul>
 				</div>
-				<div class="content">
+				<div class="content" style="width: 696px;">
 					<div class="table-data-container">
 						<div class="tanker">
 							<div class="blank-tanker">
@@ -43,50 +44,91 @@
 									<li {% if data.water_level >= 10 %}style="background: blue;"{% endif %}><span>10</span></li>
 									<li {% if data.water_level >= 0 %}style="background: blue;"{% endif %}><span>00</span></li>
 								</ul>
-								<div class="full-tank-block" style="margin-top: {{ data.full_water_level|add:"-80" }}px;">
+								<div class="full-tank-block" style="top: {{ data.full_water_level|add_special:"70" }}px;">
 									<span class="strip">&nbsp;</span>
 									<span class="text button on">Full</span>
 								</div>
-								<div class="low-tank-block" style="margin-top: {{ data.full_water_level|add:"-80" }}px;">
+								<div class="low-tank-block" style="top: {{ data.low_water_level|subtract:"200" }}px;">
 									<span class="strip">&nbsp;</span>
 									<span class="text button off">Low</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="status-block">
-						<span> Motor Status </span>
-						<span class="on button">
-                            {% if data.onoff == 1%}ON{% endif %}
-                            {% if data.onoff == 0%}OFF{% endif %}
-                        </span>
-						&nbsp;&nbsp;
-						<span> 
-							Since <input type="text" class="text-box" value="01" size="1" /> Hours
+					<div class="status-block" style="font-size: 20px;">
+						<form method="get" action="submit">
+                        Motor Status
+                        <input type="hidden" name="id" value="13">
+                            {% if controller.onoff == 1%}
+                                <input type="hidden" name="onoff" value="0">
+                                <input type="submit" value="ON" style="background: red; color: #ffffff; width: 4em; height: 4em;">
+                                &nbsp;&nbsp;
+                                 <form method="get" action="submit">
+                             <input type="hidden" name="id" value="106">
+                             <input type="submit" value="RESET" style="background: blue; color: #ffffff;  width: 4em; height: 4em;">
+
+                        </form>
+						        <span>
+							Motor has been on for: <span style="color: red;">1 Hours
 							&nbsp;
-							<input type="text" class="text-box" value="35" size="1" /> Min
-							<select>
-								<option>AM</option>
-								<option>PM</option>
-							</select>
+							35 Min</span>
+
 						</span>
+                            {% endif %}
+                            {% if controller.onoff == 0%}
+                                <input type="hidden" name="onoff" value="1">
+                                <input type="submit" value="OFF" style="background: green; color: #ffffff;  width: 4em; height: 4em;">
+                            &nbsp;&nbsp;
+                                 <form method="get" action="submit">
+                             <input type="hidden" name="id" value="106">
+                             <input type="submit" value="RESET" style="background: blue; color: #ffffff;  width: 4em; height: 4em;">
+
+                        </form>
+                                <br>
+						    <span>
+							Motor has been off for: <span style="color: red;">2 Hours
+							&nbsp;
+							21 Min</span>
+                                </span>
+                            {% endif %}
+                        </form>
+
 					</div>
-				</div>
-				<div class="right-sidebar">
-					<h2 class="heading">ALARM</h2>
+                </div>
+				<div class="right-sidebar" style="border: none;">
+					<h2 class="heading" style="width: 200%; border: none; background: #000000; height: 62px; color: #ffffff;">Controller Alarms and Information</h2>
 					<ul class="right-navigation">
-						<li {% if data.no_signal_alarm_top == 1%}class="active blink"{% endif %}><a href="">No Signal</a></li>
-						<li {% if data.overflow_alarm == 1%}class="active blink"{% endif %}><a href="">Overflow</a></li>
-						<li {% if data.low_level_alarm%}class="active blink"{% endif %}><a href="">Low Level</a></li>
-						<li {% if data.no_signal_alarm_sump == 1%}class="active blink"{% endif %}><a href="">Sump Low</a></li>
-						<li {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">High Volt</a></li>
-						<li {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}><a href="">Low Volt</a></li>
-						<li {% if data.timeout_alarm == 1%}class="active blink"{% endif %}><a href="">Timeout</a></li>
-						<li {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}><a href="">Comm. Error</a></li>
-						<li {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}><a href="">Flow Error</a></li>
-						<li {% if data.line_water_alarm == 1%}class="active blink"{% endif %}><a href="">Line Water</a></li>
-					</ul>
+                    <li>
+                    <table width="200%" border="1" style="font-size:10px; height: 358px; background: #CCCCCC">
+                        <tr>
+                            <td {% if controller.high_voltage_alarm == 1%}class="active blink"{% endif %}>High Volt</td>
+                            <td>VOLTAGE X: {{ controller.voltage }}V</td>
+                        </tr>
+                        <tr>
+                            <td {% if controller.low_voltage_alarm == 1%}class="active blink"{% endif %}>Low Volt</td>
+                            <td>VOLTAGE Y: {{ controller.voltage_y }}V</td>
+                        </tr>
+                        <tr>
+                            <td {% if controller.timeout_alarm == 1%}class="active blink"{% endif %}>Timeout</td>
+                            <td>VOLTAGE Z: {{ controller.voltage_z }}V</td>
+                        </tr>
+                    <tr>
+                            <td {% if controller.comm_error_alarm == 1%}class="active blink"{% endif %}>Comm Error</td>
+                            <td>CURRENT: {{ controller.current }}A</td>
+                        </tr>
+                    <tr>
+                            <td {% if controller.flow_error_alarm == 1%}class="active blink"{% endif %}>FLow Error</td>
+                            <td>POWER FACTOR {{ controller.power_factor }}</td>
+                        </tr>
+
+                    </table>
+                    </li>
+                    </ul>
+                <div style="margin-top:10px; width: 200px; font-size: 20px; color: #000000;">LAST UPDATE DATE: {{ controller.last_update }}</div>
+
 				</div>
+				<div class="clear"></div>
+			</div>
 
 			</div>
 {% endblock %}

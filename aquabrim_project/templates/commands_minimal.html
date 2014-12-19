@@ -17,9 +17,9 @@
             <input type="hidden" name="sub_id" value="{{ tank.sub_ID }}"/><br />
             <input type="hidden" value="3" name="id"><br/>
 
-            Flow Protection: <input type="number" min="0" max="1" name="fp" value="{{ tank.flow_protection }}"><br />
-            Enable/Disable: <input type="number" min="0" max="1" name="End" value="{{ tank.enable_disable }}"><br />
-            No signal duration: <input type="number" min="0" max="31" name="nsd" value="{{ tank.no_signal_duration }}"><br>
+            Flow Protection: <input type="number" min="0" max="1" name="fp" value="{{ data.flow_protection }}"><br />
+            Enable/Disable: <input type="number" min="0" max="1" name="End" value="{{ data.enable_disable }}"><br />
+            No signal duration: <input type="number" min="0" max="31" name="nsd" value="{{ data.no_signal_duration }}"><br>
             <input type="submit" value="submit"/>
         </form>
         <h3>Motor Trigger Setting</h3>
@@ -29,13 +29,13 @@
             <input type="hidden" value="5" name="id"><br/>
             Type of Tx:
             <select name="tx_type">
-                <option value="0" {% if tank.Tx_type == 0 %}selected{% endif %}>SUMP</option>
-                <option value="1" {% if tank.Tx_type == 1 %}selected{% endif %}>TOP</option>
-                <option value="2" {% if tank.Tx_type == 2 %}selected{% endif %}>LINE</option>
+                <option value="0" {% if data.Tx_type == 0 %}selected{% endif %}>SUMP</option>
+                <option value="1" {% if data.Tx_type == 1 %}selected{% endif %}>TOP</option>
+                <option value="2" {% if data.Tx_type == 2 %}selected{% endif %}>LINE</option>
             </select><br>
 
             Offset Level for reset: <input type="number" min="10" max="25" name="offset" value="{{ tank.offset_level_reset }}"><br />
-            Type of Water Level
+            Type of Water Level:
             <select name="water_level_type">
                 <option value="1" selected>HIGH</option>
                 <option value="0" >LOW</option>

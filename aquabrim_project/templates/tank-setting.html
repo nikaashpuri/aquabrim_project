@@ -8,7 +8,7 @@
 					<h2 class="heading">Tanks</h2>
 					<ul class="left-navigation" style="font-size: 10px;">
                         {% for tank in list_of_tanks %}
-						<li class="active"><a href="">{{ tank.name }}(sid {{ tank.sub_ID }})</a></li>
+						<li class="active"><a href="">{{ tank.name }}</a></li>
                         {% endfor %}
 					</ul>
 				</div>
@@ -31,7 +31,7 @@
                             <th class="heading">name change</th>
                         {% for data in list_of_tanks %}
 							<tr>
-                                <td style="font-size: 8px;">Dest. Tank</td>
+                                <td style="font-size: 10px;">Dest. Tank (sid {{ data.sub_ID }})</td>
 								<form method="get" action="submit">
                                     <input type="hidden" name="id" value="5">
                                     <input type="hidden" name="water_type" value="1">
@@ -61,7 +61,7 @@
 										<input type="checkbox" name="fla" value="1" class="check-alarm-full checkbox" {% if data.full_level_alarm == 1%}checked{% endif %} />
 									</span>
 									<span class="alarm-oflow alarm">
-										<input type="checkbox" name="End" value="1" class="check-alarm-oflow checkbox" {% if data.enable_disable == 1%}checked{% endif %}/>
+										<input type="checkbox" name="ofa" value="1" class="check-alarm-oflow checkbox" {% if data.overflow_alarm == 1%}checked{% endif %}/>
 									</span>
 								</td>
 								<td>

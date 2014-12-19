@@ -23,9 +23,9 @@
 						<table width="100%" border="1" cellspacing="0" cellpadding="0" class="table-data" id="gridLevelTankLevel">
 							<th class="heading" width="20%" style="background: #000000;">Name</th>
 
-                            <th class="heading" width="20%" style="background: #000000;">Low Level</th>
+                            <th class="heading" width="5%" style="background: #000000;">Low Level</th>
 							<th class="heading" width="40%" style="background: #000000;">Present Water Level</th>
-							<th class="heading" width="20%" style="background: #000000;">Full Level</th>
+							<th class="heading" width="5%" style="background: #000000;">Full Level</th>
                         	<th class="heading" width="4%" style="font-size: 10px;background: #000000;">Over Flow&nbsp;&nbsp;</th>
 							<!-- <th class="heading" width="4%" style="font-size: 10px;background: #000000;">&nbsp;Sump Low&nbsp;</th> -->
                             <th class="heading" width="4%" style="font-size: 10px;background: #000000;">No Signal</th>
@@ -34,40 +34,54 @@
 
                         {% for data in list_of_tanks %}
                             <tr>
-                                <td>{{ data.name }}</td>
-								<td class="first"><span class="grid-tank-level" fillgridto="{{ data.low_water_level }}">&nbsp;</span>{{ data.low_water_level }}%</td>
+                                <td style="background: green; color: #ffffff;">{{ data.name }}</td>
+								<td class="first"><span class="grid-tank-level">&nbsp;</span>{{ data.low_water_level }}%</td>
 								<td class="second"><span class="gradient grid-tank-level" fillgridto="{{ data.water_level }}%">&nbsp;</span>{{ data.water_level }}%</td>
 								<td class="third"><span class="grid-tank-level" fillgridto="{{ data.full_water_level }}">&nbsp;</span>{{ data.full_water_level }}%</td>
-                                <td {% if data.overflow_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <td {% if data.current_overflow_status == 1%}class="active blink" style="background: orange;"{% endif %}></td>
                                 <!-- <td {% if data.no_signal_alarm_sump == 1%}class="active blink" style="background: orange;"{% endif %}></td> -->
-                                <td {% if data.no_signal_alarm_top == 1%}class="active blink" style="background: orange;"{% endif %}></td>
+                                <td {% if data.no_signal_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td>
                                 <!-- <td {% if data.low_level_alarm == 1%}class="active blink" style="background: orange;"{% endif %}></td> -->
 
                         	</tr>
                         {% endfor %}
 						</table>
-                    <div style="padding: 10px; margin-top:20px; font-size: 20px; color: #ffffff;">LAST UPDATE DATE: {{ data.last_update }}</div>
 					</div>
 					<div class="status-block" style="font-size: 20px;">
-						<form method="get" action="submit">
-                        Motor Status
-                        <input type="hidden" name="id" value="13">
-                            {% if data.onoff == 1%}
+						Motor Status
+
+                            {% if controller.onoff == 1%}
+                            <form method="get" action="submit" style="display: inline-block;">
+                                <input type="hidden" name="id" value="13">
                                 <input type="hidden" name="onoff" value="0">
                                 <input type="submit" value="ON" style="background: red; color: #ffffff; width: 4em; height: 4em;">
-                                &nbsp;&nbsp;
-						    <br>
-                                <span>
+
+                            </form>
+                            <form method="get" action="submit" style="display: inline-block;">
+                             <input type="hidden" name="id" value="106">
+                             <input type="submit" value="RESET" style="background: blue; color: #ffffff;  width: 4em; height: 4em;">
+
+                            </form>
+                                <br>
+						        <span>
 							Motor has been on for: <span style="color: red;">1 Hours
 							&nbsp;
 							35 Min</span>
 
 						</span>
                             {% endif %}
-                            {% if data.onoff == 0%}
+                            {% if controller.onoff == 0%}
+                            <form method="get" action="submit" style="display: inline-block;">
+                                <input type="hidden" name="id" value="13">
                                 <input type="hidden" name="onoff" value="1">
                                 <input type="submit" value="OFF" style="background: green; color: #ffffff;  width: 4em; height: 4em;">
-                            &nbsp;&nbsp;
+
+                            </form>
+                             <form method="get" action="submit" style="display: inline-block;">
+                             <input type="hidden" name="id" value="106">
+                             <input type="submit" value="RESET" style="background: blue; color: #ffffff;  width: 4em; height: 4em;">
+
+                             </form>
                                 <br>
 						    <span>
 							Motor has been off for: <span style="color: red;">2 Hours
@@ -75,7 +89,7 @@
 							21 Min</span>
                                 </span>
                             {% endif %}
-                        </form>
+
 
 					</div>
 				</div>
@@ -85,29 +99,31 @@
                     <li>
                     <table width="200%" border="1" style="font-size:10px; height: 338px; background: #CCCCCC">
                         <tr>
-                            <td {% if data.high_voltage_alarm == 1%}class="active blink"{% endif %}>High Volt</td>
-                            <td>VOLTAGE X: {{ data.voltage }}V</td>
+                            <td {% if controller.high_voltage_alarm == 1%}class="active blink"{% endif %}>High Volt</td>
+                            <td>VOLTAGE X: {{ controller.voltage }}V</td>
                         </tr>
                         <tr>
-                            <td {% if data.low_voltage_alarm == 1%}class="active blink"{% endif %}>Low Volt</td>
-                            <td>VOLTAGE Y: {{ data.voltage_y }}V</td>
+                            <td {% if controller.low_voltage_alarm == 1%}class="active blink"{% endif %}>Low Volt</td>
+                            <td>VOLTAGE Y: {{ controller.voltage_y }}V</td>
                         </tr>
                         <tr>
-                            <td {% if data.timeout_alarm == 1%}class="active blink"{% endif %}>Timeout</td>
-                            <td>VOLTAGE Z: {{ data.voltage_z }}V</td>
+                            <td {% if controller.timeout_alarm == 1%}class="active blink"{% endif %}>Timeout</td>
+                            <td>VOLTAGE Z: {{ controller.voltage_z }}V</td>
                         </tr>
                     <tr>
-                            <td {% if data.comm_error_alarm == 1%}class="active blink"{% endif %}>Comm Error</td>
-                            <td>CURRENT: {{ data.current }}A</td>
+                            <td {% if controller.comm_error_alarm == 1%}class="active blink"{% endif %}>Comm Error</td>
+                            <td>CURRENT: {{ controller.current }}A</td>
                         </tr>
                     <tr>
-                            <td {% if data.flow_error_alarm == 1%}class="active blink"{% endif %}>FLow Error</td>
-                            <td>POWER FACTOR {{ data.power_factor }}</td>
+                            <td {% if controller.flow_error_alarm == 1%}class="active blink"{% endif %}>FLow Error</td>
+                            <td>POWER FACTOR {{ controller.power_factor }}</td>
                         </tr>
 
                     </table>
                     </li>
                     </ul>
+                <div style="margin-top:10px; width: 200px; font-size: 20px; color: #000000;">LAST UPDATE DATE: {{ controller.last_update }}</div>
+
 				</div>
 				<div class="clear"></div>
 			</div>

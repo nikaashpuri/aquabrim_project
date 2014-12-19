@@ -18,7 +18,7 @@ import datetime
 import file_locations_and_constants
 from django.utils.timezone import now
 from datetime import timedelta
-from models import Timer
+from models import Timer, Tank
 
 def list_change(request):
     on = int(request.GET.get('onoff', 0))
@@ -104,21 +104,22 @@ def deviceData(request, data_id=1):
 
 def userInterface(request, data_id=1):
     controller = Controller.objects.get(id=data_id)
-    list_of_tanks = Controller.objects.all().filter(device_id=controller.device_id)
+    list_of_tanks = Tank.objects.all().filter(controller=controller, display=1)
     # print list_of_tanks
     tank_to_focus_on = int(request.GET.get('tank_to_focus_on', 0))
-    controller = list_of_tanks[tank_to_focus_on]
+    # controller = list_of_tanks[tank_to_focus_on]
 
     if controller.graphical_or_not == 1:
         return render_to_response('tank.html',
-                              {'data':controller,
-                               'list_of_tanks':list_of_tanks,
-                               'tank_to_focus_on': tank_to_focus_on})
+                              {'data': list_of_tanks[tank_to_focus_on],
+                               'list_of_tanks': list_of_tanks,
+                               'tank_to_focus_on': tank_to_focus_on,
+                               'controller': controller})
     else:
         return render_to_response('index.html',
-                              {'data':controller,
-                               'list_of_tanks':list_of_tanks,
-                               'tank_to_focus_on': tank_to_focus_on})
+                              {'controller': controller,
+                               'list_of_tanks': list_of_tanks,
+                               })
 
 def userInterfaceControllerSetting(request, data_id=1):
     return render_to_response('controller-setting.html',
@@ -130,7 +131,7 @@ def userInterfaceDisplaySetting(request, data_id=1):
 
 def userInterfaceTankSetting(request, data_id=1):
     controller = Controller.objects.get(id=data_id)
-    list_of_tanks = Controller.objects.all().filter(device_id=controller.device_id)
+    list_of_tanks = Tank.objects.all().filter(controller=controller)
     # print list_of_tanks
 
     return render_to_response('tank-setting.html',
@@ -176,7 +177,7 @@ def activate_server(request):
 
 def commandData(request, data_id):
     aux_controller = Controller.objects.get(id=data_id)
-    list_of_tanks = Controller.objects.all().filter(device_id=aux_controller.device_id)
+    list_of_tanks = Tank.objects.all().filter(controller=aux_controller)
     return render_to_response('commands_minimal.html',
                               {'list_of_tanks': list_of_tanks,
                                'data': aux_controller})
@@ -184,14 +185,8 @@ def commandData(request, data_id):
 
 
 def submitData(request, data_id):
-    if request.GET.has_key('sub_id'):
 
-        main_controller = Controller.objects.get(id=data_id)
-        controller = Controller.objects.get(device_id=main_controller.device_id,
-                                            sub_ID=request.GET.get('sub_id'))
-
-    else:
-        controller = Controller.objects.get(id=data_id)
+    controller = Controller.objects.get(id=data_id)
 
     command_id = int(request.GET.get('id'))
     idno = controller.device_id
@@ -210,22 +205,23 @@ def submitData(request, data_id):
 
     if (command_id == 3):
         sub_ID = request.GET.get('sub_id', controller.sub_ID)
+        tank = Tank.objects.get(controller=controller, sub_ID=sub_ID)
 
-        low_level_alarm = controller.low_level_alarm
-        full_level_alarm = controller.full_level_alarm
+        low_level_alarm = tank.low_level_alarm
+        full_level_alarm = tank.full_level_alarm
+
         enable_disable = request.GET.get('End')
         controller.enable_disable = enable_disable
+
         flow_protection = request.GET.get('fp')
         controller.flow_protection = flow_protection
 
-        motor_trigger = controller.motor_trigger
+        motor_trigger = tank.motor_trigger
+
         no_signal_duration = request.GET.get('nsd')
         controller.no_signal_duration = no_signal_duration
 
-        Controller.objects.all().filter(device_id=controller.device_id)\
-            .update(enable_disable=enable_disable,
-                    flow_protection=flow_protection,
-                    no_signal_duration=no_signal_duration)
+        tank.save()
 
         PayloadA = convert2bin(sub_ID, 6) + convert2bin(full_level_alarm, 1) + convert2bin(low_level_alarm, 1)
         PayloadB = convert2bin(motor_trigger, 1) + \
@@ -235,24 +231,27 @@ def submitData(request, data_id):
 
 
     elif (command_id == 5):
+
         Tx_type = request.GET.get('tx_type')
-        if int(Tx_type) != controller.Tx_type:
-            controller.Tx_type = Tx_type
-            Controller.objects.all().filter(device_id=controller.device_id)\
-                        .update(Tx_type=Tx_type)
+        controller.Tx_type = Tx_type
+
+        sub_ID = request.GET.get('sub_id')
+        tank = Tank.objects.get(controller=controller, sub_ID=sub_ID)
+
 
         offset_level_reset = request.GET.get('offset')
-        controller.offset_level_reset = offset_level_reset
+        tank.offset_level_reset = offset_level_reset
 
         water_level_type = request.GET.get('water_level_type')
         if int(water_level_type) == 1:
-            water_level = controller.full_water_level
+            water_level = tank.full_water_level
         else:
-            water_level = controller.low_water_level
+            water_level = tank.low_water_level
+
+        tank.save()
 
         offset_level_reset = int(offset_level_reset)
         offset_level_reset = (offset_level_reset - 10) / 5
-        sub_ID = request.GET.get('sub_id')
 
         PayloadA = convert2bin(sub_ID, 6) + convert2bin(offset_level_reset, 2)
         PayloadB = convert2bin(water_level_type, 1) + convert2bin(water_level, 7)
@@ -299,22 +298,9 @@ def submitDataUIDisplay(request, data_id):
 def submitDataFromUserInterface(request, data_id):
 
 
-    main_controller = Controller.objects.get(id=data_id)
+    controller = Controller.objects.get(id=data_id)
 
-    Controller.objects.all()\
-            .filter(device_id=main_controller.device_id)\
-            .update(last_update=now() + timedelta(hours=5.5))
-
-
-    if request.GET.has_key('sub_id'):
-
-        controller = Controller.objects.get(device_id=main_controller.device_id,
-                                            sub_ID=request.GET.get('sub_id'))
-
-    else:
-        controller = Controller.objects.get(id=data_id)
-
-
+    controller.last_update = now() + timedelta(hours=5.5)
 
     command_id = int(request.GET.get('id'))
     idno = controller.device_id
@@ -332,35 +318,28 @@ def submitDataFromUserInterface(request, data_id):
     print request.GET
 
     if (command_id == 3):
-        sub_ID = request.GET.get('sub_id', controller.sub_ID)
+        sub_ID = request.GET.get('sub_id')
+        tank = Tank.objects.get(controller=controller, sub_ID=sub_ID)
 
-        '''
-        print controller.sub_ID
-        controller = Controller.objects.get(device_id=controller.device_id,
-                                            sub_ID=sub_ID)
-
-        print controller.sub_ID
-        # controller.sub_ID = sub_ID
-        '''
 
         low_level_alarm = request.GET.get('lla', 0)
+        tank.low_level_alarm = low_level_alarm
 
-        controller.low_level_alarm = low_level_alarm
         full_level_alarm = request.GET.get('fla', 0)
+        tank.full_level_alarm = full_level_alarm
 
-        controller.full_level_alarm = full_level_alarm
+        overflow_alarm = request.GET.get('ofa', 0)
+        tank.overflow_alarm = overflow_alarm
 
-        enable_disable = request.GET.get('End', 0)
-
-        controller.enable_disable = enable_disable
         flow_protection = request.GET.get('fp',
                                           0)
-
         controller.flow_protection = flow_protection
+
         motor_trigger = request.GET.get('mt', 0)
-        controller.motor_trigger = motor_trigger
+        tank.motor_trigger = motor_trigger
 
         no_signal_duration = request.GET.get('nsd', controller.no_signal_duration)
+
 
         PayloadA = convert2bin(sub_ID, 6) + convert2bin(full_level_alarm, 1) + convert2bin(low_level_alarm, 1)
         PayloadB = convert2bin(motor_trigger, 1) + \
@@ -370,12 +349,13 @@ def submitDataFromUserInterface(request, data_id):
 
 
 
-        display = request.GET.get('dsp', controller.display)
-        controller.display = display
+        display = request.GET.get('dsp', 0)
+        tank.display = display
 
-        motor_trigger = request.GET.get('tm', controller.motor_trigger)
-        controller.motor_trigger = motor_trigger
+        motor_trigger = request.GET.get('tm', 0)
+        tank.motor_trigger = motor_trigger
 
+        tank.save()
 
 
     elif (command_id == 4):
@@ -399,27 +379,32 @@ def submitDataFromUserInterface(request, data_id):
 
 
     elif (command_id == 5):
+
+        sub_ID = request.GET.get('sub_id')
+        tank = Tank.objects.get(controller=controller, sub_ID=sub_ID)
+
         Tx_type = request.GET.get('tx_type', controller.Tx_type)
         controller.Tx_type = Tx_type
 
-        offset_level_reset = request.GET.get('offset', controller.offset_level_reset)
-        controller.offset_level_reset = offset_level_reset
+        offset_level_reset = request.GET.get('offset', tank.offset_level_reset)
+        tank.offset_level_reset = offset_level_reset
 
-        water_level_type = request.GET.get('water_type', controller.water_level_type)
-        controller.water_level_type = water_level_type
+        water_level_type = request.GET.get('water_type', tank.water_level_type)
+        tank.water_level_type = water_level_type
 
-        sub_ID = request.GET.get('sub_id')
 
         if int(water_level_type) == 1:
             full_water_level = request.GET.get('water')
-            controller.full_water_level = full_water_level
-            water_level = controller.full_water_level
+            tank.full_water_level = full_water_level
+            water_level = tank.full_water_level
         elif int(water_level_type) == 0:
-            full_water_level = request.GET.get('water')
-            controller.low_water_level = full_water_level
-            water_level = controller.low_water_level
+            low_water_level = request.GET.get('water')
+            tank.low_water_level = low_water_level
+            water_level = tank.low_water_level
         else:
-            water_level = controller.water_level
+            water_level = tank.water_level
+
+        tank.save()
 
         offset_level_reset = int(offset_level_reset)
         offset_level_reset = (offset_level_reset - 10) / 5
@@ -659,8 +644,16 @@ def submitDataFromUserInterface(request, data_id):
         PayloadB = "00111001"
 
     elif (command_id == 105):
+        sub_ID = request.GET.get('sub_id')
+        tank = Tank.objects.get(controller=controller, sub_ID=sub_ID)
         new_name = request.GET.get('new_name')
-        controller.name = new_name
+        tank.name = new_name
+        tank.save()
+
+    elif (command_id == 106):
+        PayloadA = "00000000"
+        PayloadB = "00000100"
+        command_byte = "00001101"
 
     '''elif(command_id==12):
         pass
