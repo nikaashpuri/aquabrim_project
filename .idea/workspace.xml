@@ -38,8 +38,8 @@
       <file leaf-file-name="tank.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aquabrim_project/templates/tank.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="480" max-vertical-offset="2085">
-              <caret line="46" column="112" selection-start-line="46" selection-start-column="112" selection-end-line="46" selection-end-column="112" />
+            <state vertical-scroll-proportion="-6.8333335" vertical-offset="1201" max-vertical-offset="2190">
+              <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
               <folding>
                 <element signature="e#1260#1317#0#HTML" expanded="true" />
                 <element signature="e#1364#1421#0#HTML" expanded="true" />
@@ -53,29 +53,39 @@
                 <element signature="e#2183#2239#0#HTML" expanded="true" />
                 <element signature="e#2285#2341#0#HTML" expanded="true" />
                 <element signature="e#2387#2442#0#HTML" expanded="true" />
+                <element signature="e#2526#2586#0#HTML" expanded="true" />
                 <element signature="e#2732#2789#0#HTML" expanded="true" />
                 <element signature="e#2969#2993#0#HTML" expanded="true" />
-                <element signature="e#3340#3405#0#HTML" expanded="true" />
-                <element signature="e#3658#3725#0#HTML" expanded="true" />
-                <element signature="e#3817#3836#0#HTML" expanded="true" />
-                <element signature="e#4135#4203#0#HTML" expanded="true" />
-                <element signature="e#4452#4519#0#HTML" expanded="true" />
-                <element signature="e#4645#4664#0#HTML" expanded="true" />
-                <element signature="e#4887#4908#0#HTML" expanded="true" />
-                <element signature="e#4935#5020#0#HTML" expanded="true" />
-                <element signature="e#5171#5229#0#HTML" expanded="true" />
-                <element signature="e#6593#6664#0#HTML" expanded="true" />
+                <element signature="e#3136#3166#0#HTML" expanded="true" />
+                <element signature="e#3384#3449#0#HTML" expanded="true" />
+                <element signature="e#3551#3614#0#HTML" expanded="true" />
+                <element signature="e#3761#3828#0#HTML" expanded="true" />
+                <element signature="e#4087#4106#0#HTML" expanded="true" />
+                <element signature="e#4326#4356#0#HTML" expanded="true" />
+                <element signature="e#4575#4643#0#HTML" expanded="true" />
+                <element signature="e#4746#4809#0#HTML" expanded="true" />
+                <element signature="e#4956#5023#0#HTML" expanded="true" />
+                <element signature="e#5316#5335#0#HTML" expanded="true" />
+                <element signature="e#5527#5548#0#HTML" expanded="true" />
+                <element signature="e#5575#5660#0#HTML" expanded="true" />
+                <element signature="e#5811#5869#0#HTML" expanded="true" />
+                <element signature="e#7233#7304#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="machine_extras.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/machine/templatetags/machine_extras.py">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aquabrim_project/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5327869" vertical-offset="0" max-vertical-offset="366">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.45288754" vertical-offset="796" max-vertical-offset="2085">
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#input#1;n#form#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#form#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,9 +122,9 @@
         <option value="$PROJECT_DIR$/aquabrim_project/templates/controller-setting.html" />
         <option value="$PROJECT_DIR$/machine/views.py" />
         <option value="$PROJECT_DIR$/aquabrim_project/templates/tank-setting.html" />
-        <option value="$PROJECT_DIR$/aquabrim_project/templates/index.html" />
-        <option value="$PROJECT_DIR$/aquabrim_project/templates/tank.html" />
         <option value="$PROJECT_DIR$/machine/templatetags/machine_extras.py" />
+        <option value="$PROJECT_DIR$/aquabrim_project/templates/tank.html" />
+        <option value="$PROJECT_DIR$/aquabrim_project/templates/index.html" />
       </list>
     </option>
   </component>
@@ -589,7 +599,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22440945" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22440945" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22440945" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -966,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aquabrim_project/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5440729" vertical-offset="196" max-vertical-offset="2085">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aquabrim_project/templates/tank-setting.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="1560">
@@ -984,10 +986,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/machine/templatetags/machine_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aquabrim_project/templates/tank.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="480" max-vertical-offset="2085">
-          <caret line="46" column="112" selection-start-line="46" selection-start-column="112" selection-end-line="46" selection-end-column="112" />
+        <state vertical-scroll-proportion="-6.8333335" vertical-offset="1201" max-vertical-offset="2190">
+          <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
           <folding>
             <element signature="e#1260#1317#0#HTML" expanded="true" />
             <element signature="e#1364#1421#0#HTML" expanded="true" />
@@ -1001,27 +1011,37 @@
             <element signature="e#2183#2239#0#HTML" expanded="true" />
             <element signature="e#2285#2341#0#HTML" expanded="true" />
             <element signature="e#2387#2442#0#HTML" expanded="true" />
+            <element signature="e#2526#2586#0#HTML" expanded="true" />
             <element signature="e#2732#2789#0#HTML" expanded="true" />
             <element signature="e#2969#2993#0#HTML" expanded="true" />
-            <element signature="e#3340#3405#0#HTML" expanded="true" />
-            <element signature="e#3658#3725#0#HTML" expanded="true" />
-            <element signature="e#3817#3836#0#HTML" expanded="true" />
-            <element signature="e#4135#4203#0#HTML" expanded="true" />
-            <element signature="e#4452#4519#0#HTML" expanded="true" />
-            <element signature="e#4645#4664#0#HTML" expanded="true" />
-            <element signature="e#4887#4908#0#HTML" expanded="true" />
-            <element signature="e#4935#5020#0#HTML" expanded="true" />
-            <element signature="e#5171#5229#0#HTML" expanded="true" />
-            <element signature="e#6593#6664#0#HTML" expanded="true" />
+            <element signature="e#3136#3166#0#HTML" expanded="true" />
+            <element signature="e#3384#3449#0#HTML" expanded="true" />
+            <element signature="e#3551#3614#0#HTML" expanded="true" />
+            <element signature="e#3761#3828#0#HTML" expanded="true" />
+            <element signature="e#4087#4106#0#HTML" expanded="true" />
+            <element signature="e#4326#4356#0#HTML" expanded="true" />
+            <element signature="e#4575#4643#0#HTML" expanded="true" />
+            <element signature="e#4746#4809#0#HTML" expanded="true" />
+            <element signature="e#4956#5023#0#HTML" expanded="true" />
+            <element signature="e#5316#5335#0#HTML" expanded="true" />
+            <element signature="e#5527#5548#0#HTML" expanded="true" />
+            <element signature="e#5575#5660#0#HTML" expanded="true" />
+            <element signature="e#5811#5869#0#HTML" expanded="true" />
+            <element signature="e#7233#7304#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machine/templatetags/machine_extras.py">
+    <entry file="file://$PROJECT_DIR$/aquabrim_project/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5327869" vertical-offset="0" max-vertical-offset="366">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.45288754" vertical-offset="796" max-vertical-offset="2085">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#form#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
