@@ -4,7 +4,7 @@
 		<div class="container">
 
 			<div class="middle-container no-right">
-				<div class="left-sidebar">
+				<div class="left-sidebar" style="display: inline-block; width: auto;">
 					<h2 class="heading">Tanks</h2>
 					<ul class="left-navigation" style="font-size: 10px;">
                         {% for tank in list_of_tanks %}
@@ -12,9 +12,9 @@
                         {% endfor %}
 					</ul>
 				</div>
-				<div class="content">
+				<div class="content" style="width: 875px;">
 					<div class="table-data-container">
-						<table width="100%" cellspacing="0" cellpadding="0" class="table-data tank-setting">
+						<table width="100%" cellspacing="0" cellpadding="0" class="table-data tank-setting" style="font-size: 10px;">
 							<th class="heading">Type</th>
 							<th class="heading">Full Level (%)</th>
                             <th class="heading">&nbsp;</th>
@@ -27,10 +27,11 @@
 							</th>
 							<th class="heading">Display</th>
 							<th class="heading">Trigger Motor</th>
-
+                            <th class="heading"></th>
+                            <th class="heading">name change</th>
                         {% for data in list_of_tanks %}
 							<tr>
-                                <td>Dest. Tank</td>
+                                <td style="font-size: 8px;">Dest. Tank</td>
 								<form method="get" action="submit">
                                     <input type="hidden" name="id" value="5">
                                     <input type="hidden" name="water_type" value="1">
@@ -73,6 +74,17 @@
                                     <input type="submit" value="submit" />
                                 </td>
                               </form>
+                            <form method="get" action="submit">
+                                <input type="hidden" name="id" value="105">
+                                <input type="hidden" name="sub_id" value="{{ data.sub_ID }}">
+
+                                <td>
+                                    <input type="text" class="text-box" name="new_name" value="{{ data.name }}" style="width: 40px;" />
+                                </td>
+                                <td>
+                                    <input type="submit" value="submit" />
+                                </td>
+                            </form>
 							</tr>
                         {% endfor %}
 

@@ -18,6 +18,7 @@ import datetime
 import file_locations_and_constants
 from django.utils.timezone import now
 from datetime import timedelta
+from models import Timer
 
 def list_change(request):
     on = int(request.GET.get('onoff', 0))
@@ -136,9 +137,12 @@ def userInterfaceTankSetting(request, data_id=1):
                               {'list_of_tanks':list_of_tanks})
 
 def userInterfaceTimerSetting(request, data_id=1):
-    return render_to_response('timer-setting.html',
-                              {'data': Controller.objects.get(id=data_id)})
+    controller_object = Controller.objects.get(id=data_id)
+    list_timers = Timer.objects.all().filter(controller=controller_object)
 
+    return render_to_response('timer-setting.html',
+                              {'data': controller_object,
+                               'list_timers': list_timers})
 
 import os
 from aquabrim_project.settings import BASE_DIR
@@ -232,23 +236,26 @@ def submitData(request, data_id):
 
     elif (command_id == 5):
         Tx_type = request.GET.get('tx_type')
-        controller.Tx_type = Tx_type
+        if int(Tx_type) != controller.Tx_type:
+            controller.Tx_type = Tx_type
+            Controller.objects.all().filter(device_id=controller.device_id)\
+                        .update(Tx_type=Tx_type)
 
         offset_level_reset = request.GET.get('offset')
         controller.offset_level_reset = offset_level_reset
 
         water_level_type = request.GET.get('water_level_type')
-        if int(water_level_type == 1):
+        if int(water_level_type) == 1:
             water_level = controller.full_water_level
         else:
             water_level = controller.low_water_level
 
-        Controller.objects.all().filter(device_id=controller.device_id)\
-            .update(Tx_type=Tx_type,
-                    offset_level_reset=offset_level_reset)
+        offset_level_reset = int(offset_level_reset)
+        offset_level_reset = (offset_level_reset - 10) / 5
+        sub_ID = request.GET.get('sub_id')
 
-        PayloadA = convert2bin(Tx_type, 2) + convert2bin(water_level_type, 2) + convert2bin(offset_level_reset, 4)
-        PayloadB = convert2bin(water_level, 8)
+        PayloadA = convert2bin(sub_ID, 6) + convert2bin(offset_level_reset, 2)
+        PayloadB = convert2bin(water_level_type, 1) + convert2bin(water_level, 7)
 
 
 
@@ -401,6 +408,7 @@ def submitDataFromUserInterface(request, data_id):
         water_level_type = request.GET.get('water_type', controller.water_level_type)
         controller.water_level_type = water_level_type
 
+        sub_ID = request.GET.get('sub_id')
 
         if int(water_level_type) == 1:
             full_water_level = request.GET.get('water')
@@ -413,9 +421,11 @@ def submitDataFromUserInterface(request, data_id):
         else:
             water_level = controller.water_level
 
+        offset_level_reset = int(offset_level_reset)
+        offset_level_reset = (offset_level_reset - 10) / 5
 
-        PayloadA = convert2bin(Tx_type, 2) + convert2bin(water_level_type, 2) + convert2bin(offset_level_reset, 4)
-        PayloadB = convert2bin(water_level, 8)
+        PayloadA = convert2bin(sub_ID, 6) + convert2bin(offset_level_reset, 2)
+        PayloadB = convert2bin(water_level_type, 1) + convert2bin(water_level, 7)
 
 
     elif (command_id == 6):
@@ -515,28 +525,29 @@ def submitDataFromUserInterface(request, data_id):
 
     elif (command_id == 9):
 
-        week_days = request.GET.get('wd', controller.week_days)
-        controller.week_days = week_days
+        timer_number = int(request.GET.get('tn'))
+        contr_obj = Controller.objects.get(id=data_id)
+
+        timer = Timer.objects.get(controller=contr_obj,
+                                  timer_number=timer_number)
+
+        week_days = request.GET.get('wd', timer.week_days)
+        timer.week_days = week_days
 
         if int(week_days) in [0,1,2]:
             timer_enable = 1
         else:
             timer_enable = 0
 
-        controller.timer_enable = timer_enable
+        timer.timer_enable = timer_enable
 
+        hours = request.GET.get('h', timer.hours)
+        timer.hours = hours
 
-        week_days_text = request.GET.get('wd_text', controller.timer_days)
-        controller.timer_days = week_days_text
+        m = request.GET.get('m', timer.m)
+        timer.m = m
 
-        timer_number = request.GET.get('tn', controller.timer_number)
-        controller.timer_number = timer_number
-
-        hours = request.GET.get('h', controller.hours)
-        controller.hours = hours
-
-        m = request.GET.get('m', controller.m)
-        controller.m = m
+        timer.save()
 
         PayloadA = convert2bin(timer_enable, 1) + convert2bin(week_days, 2) + convert2bin(hours, 5)
         PayloadB = convert2bin(timer_number, 3) + convert2bin(m, 5)
@@ -544,14 +555,20 @@ def submitDataFromUserInterface(request, data_id):
 
     elif (command_id == 10):
 
-        timer_number = request.GET.get('tn', controller.week_days)
+        timer_number = int(request.GET.get('tn'))
+        contr_obj = Controller.objects.get(id=data_id)
+
+        timer = Timer.objects.get(controller=contr_obj,
+                                  timer_number=timer_number)
 
 
-        max_duration_hours = request.GET.get('mdh', controller.max_duration_hours)
-        controller.max_duration_hours = max_duration_hours
+        max_duration_hours = request.GET.get('mdh', timer.max_duration_hours)
+        timer.max_duration_hours = max_duration_hours
 
-        max_duration_minutes = request.GET.get('mdm', controller.max_duration_minutes)
-        controller.max_duration_minutes = max_duration_minutes
+        max_duration_minutes = request.GET.get('mdm', timer.max_duration_minutes)
+        timer.max_duration_minutes = max_duration_minutes
+
+        timer.save()
 
         PayloadA = "000" + convert2bin(max_duration_hours, 5)
         PayloadB = convert2bin(timer_number, 3) + convert2bin(max_duration_minutes, 5)
@@ -641,6 +658,9 @@ def submitDataFromUserInterface(request, data_id):
         PayloadA = "01101001"
         PayloadB = "00111001"
 
+    elif (command_id == 105):
+        new_name = request.GET.get('new_name')
+        controller.name = new_name
 
     '''elif(command_id==12):
         pass

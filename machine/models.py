@@ -16,6 +16,9 @@ class Transmitter(models.Model):
     timestamp = models.DateTimeField()
     ip_address = models.CharField(max_length = 200, null=True)
 
+    class Meta:
+        app_label = 'machine'
+
 
 class Controller(models.Model):
     user = models.ForeignKey(User)
@@ -117,10 +120,30 @@ class Controller(models.Model):
 
     last_update = models.DateTimeField()
 
+    def __unicode__(self):
+        return self.device_id
 
+    class Meta:
+        app_label = 'machine'
 
 class Command(models.Model):
     name = models.CharField(max_length = 100)
     electronic_format = models.TextField()
     enabled = models.CharField(max_length = 10)
 
+    class Meta:
+        app_label = 'machine'
+
+
+class Timer(models.Model):
+    controller = models.ForeignKey(Controller)
+    week_days = models.IntegerField(max_length=100)
+    timer_enable = models.IntegerField(max_length=100)
+    timer_number = models.IntegerField(max_length=100)
+    hours = models.IntegerField(max_length=100)
+    m = models.IntegerField(max_length=100)
+    max_duration_hours = models.IntegerField(max_length=100)
+    max_duration_minutes = models.IntegerField(max_length=100)
+
+    class Meta:
+        app_label = 'machine'

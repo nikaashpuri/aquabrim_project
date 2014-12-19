@@ -1,5 +1,5 @@
 from django.contrib import admin
-from machine.models import Transmitter, Controller, Command
+from machine.models import Transmitter, Controller, Command, Timer
 # Register your models here.
 
 class TransmitterAdmin(admin.ModelAdmin):
@@ -12,3 +12,5 @@ class CommandAdmin(admin.ModelAdmin):
 admin.site.register(Transmitter, TransmitterAdmin)
 admin.site.register(Command, CommandAdmin)
 admin.site.register(Controller, TransmitterAdmin)
+admin.site.register(Timer, admin.ModelAdmin)
+

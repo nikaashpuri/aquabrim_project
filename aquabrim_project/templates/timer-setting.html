@@ -8,8 +8,9 @@
 				<div class="left-sidebar">
 					<h2 class="heading">Timer</h2>
 					<ul class="left-navigation">
-						<li><a href="">Timer No-1</a></li>
-
+                        {% for timer in list_timers %}
+						    <li><a href="">Timer No-{{ timer.timer_number }}</a></li>
+                        {% endfor %}
 					</ul>
 				</div>
 				<div class="content">
@@ -19,38 +20,38 @@
 							<th class="heading">Days</th>
                             <th class="heading">&nbsp;</th>
 							<th class="heading">Max Duration</th>
+                        {% for timer in list_timers %}
 							<tr>
                                 <form method="get" action="submit">
 								<td>
                                     <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="tn" value="0" >
+                                    <input type="hidden" name="tn" value="{{ timer.timer_number }}" >
 
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> Hours:
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> Min
+									<input class="text-box" type="text" value="{{ timer.hours }}" name="h" size="2" /> Hours:
+									<input class="text-box" type="text" value="{{ timer.m }}" name="m" size="2" /> Min
 
 								</td>
 								<td>
 
                                     <select name="wd">
-                                        <option value="1" {% if data.week_days == 1 %}selected{% endif %}>Mon-Fri</option>
-                                        <option value="2" {% if data.week_days == 2 %}selected{% endif %}>Sat and Sun</option>
-                                        <option value="0" {% if data.week_days == 0 %}selected{% endif %}>All Days</option>
-                                        <option value="3" {% if data.week_days == 3 %}selected{% endif %} style="background: red;">Disable</option>
+                                        <option value="1" {% if timer.week_days == 1 %}selected{% endif %}>Mon-Fri</option>
+                                        <option value="2" {% if timer.week_days == 2 %}selected{% endif %}>Sat and Sun</option>
+                                        <option value="0" {% if timer.week_days == 0 %}selected{% endif %}>All Days</option>
+                                        <option value="3" {% if timer.week_days == 3 %}selected{% endif %} style="background: red;">Disable</option>
 
                                     </select>
 								</td>
                                 <td><input type="submit" value="submit">
                                 </form></td>
 
+                                <form method="get" action="submit">
+
 								<td>
-                                    <form method="get" action="submit">
                                     <input type="hidden" name="id" value="10">
-                                    <input type="hidden" name="tn" value="0" >
-                                    <input type="hidden" name="wd" value="2" >
+                                    <input type="hidden" name="tn" value="{{ timer.timer_number }}" >
 
-
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
+									<input class="text-box" type="text" name="mdh" value="{{ timer.max_duration_hours }}" size="2" /> Hours
+									<input class="text-box" type="text" name="mdm" value="{{ timer.max_duration_minutes }}" size="2" /> Min
 								</td>
                                 <td>
 									<input type="submit" value="submit"/>
@@ -58,217 +59,7 @@
 								</td>
 
 							</tr>
-                            <!--
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="1" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr>
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="2" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr>
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="3" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr>
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="4" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr>
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="5" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr>
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="6" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr>
-                        <tr>
-                                <form method="get" action="submit">
-								<td>
-                                    <input type="hidden" name="id" value="9">
-                                    <input type="hidden" name="wd" value="2" >
-                                    <input type="hidden" name="tn" value="7" >
-
-									<input class="text-box" type="text" value="{{ data.hours }}" name="h" size="2" /> hh :
-									<input class="text-box" type="text" value="{{ data.m }}" name="m" size="2" /> mm
-
-								</td>
-								<td>
-
-                                    <select name="wd_text">
-                                        <option value="monday-friday" {% if data.timer_days == 'monday-friday' %}selected{% endif %}>monday-friday</option>
-                                        <option value="saturday and sunday" {% if data.timer_days == 'saturday and sunday' %}selected{% endif %}>saturday and sunday</option>
-                                        <option value="all days" {% if data.timer_days == 'all days' %}selected{% endif %}>all days</option>
-                                        <option value="disable" {% if data.timer_days == 'disable' %}selected{% endif %}>disable</option>
-
-                                    </select>
-								</td>
-								<td>
-									<input class="text-box" type="text" name="mdh" value="{{ data.max_duration_hours }}" size="2" /> Hours
-									<input class="text-box" type="text" name="mdm" value="{{ data.max_duration_minutes }}" size="2" /> Min
-								</td>
-                                <td>
-									<input type="submit" value="submit"/>
-								</td>
-                              </form>
-							</tr> -->
+                         {% endfor %}
 						</table>
 					</div>
 					<div class="status-block">
