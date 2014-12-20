@@ -175,6 +175,76 @@ def activate_server(request):
     return HttpResponse('server has been started')
 
 
+def masterCommandData(request, data_id):
+    aux_controller = Controller.objects.get(id=data_id)
+    if aux_controller.com_last_access_auth_or_not == 0:
+        aux_controller.com_last_access_auth_or_not = 1
+        aux_controller.save()
+        return render_to_response('master_commands_minimal.html',
+                              {'data': aux_controller,
+                               'auth': 0})
+    else:
+        return render_to_response('master_commands_minimal.html',
+                              {'data': aux_controller})
+
+
+
+def masterSubmitData(request, data_id):
+
+    controller = Controller.objects.get(id=data_id)
+
+    command_id = int(request.GET.get('id'))
+    idno = controller.device_id
+    first_byte = convert2bin(idno[:3], 2)
+    second_byte = convert2bin(idno[3:6], 2)
+    third_byte = convert2bin(idno[6:], 8)
+    idno = first_byte + second_byte + third_byte
+
+    # id_bytes = convert2bin(idno, 24)
+    command_byte = convert2bin(command_id, 8)
+
+    PayloadA = "00000000"
+    PayloadB = "00000000"
+
+    password = request.GET.get('pass')
+    m = request.GET.get('m')
+    t = request.GET.get('t')
+    tr = request.GET.get('tr')
+    d = request.GET.get('d')
+
+    print request.GET
+
+
+    if controller.com_pass == password:
+        controller.com_m = m
+        controller.com_t = t
+        controller.com_tr = tr
+        controller.com_d = d
+
+        d = int(d)/2
+
+        PayloadA = password
+        PayloadB = convert2bin(tr, 1) + convert2bin(d, 4) \
+                   + convert2bin(t, 1) \
+                   + convert2bin(m, 2)
+    else:
+        controller.com_last_access_auth_or_not = 0
+
+
+
+    data_stream = idno + command_byte + PayloadA + PayloadB
+    # print data_stream
+    send_string(data_stream)
+
+    controller.save()
+
+
+    url = '/machine/get/%s/master_command' % data_id
+    return HttpResponseRedirect(url)
+
+
+
+
 def commandData(request, data_id):
     aux_controller = Controller.objects.get(id=data_id)
     list_of_tanks = Tank.objects.all().filter(controller=aux_controller)

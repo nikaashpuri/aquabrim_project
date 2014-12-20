@@ -8,11 +8,11 @@
             <header>
 				<div class="header">
 					<ul class="header-navigation">
-						<li id="1" class="active"><a href="/machine/get/1/user_interface/">Home</a></li>
-						<li id="2"><a href="/machine/get/1/user_interface/tank-setting">Tank Setting</a></li>
-						<li id="3"><a href="/machine/get/1/user_interface/controller-setting">Controller Setting</a></li>
-						<li id="4"><a href="/machine/get/1/user_interface/display-setting">Display Setting</a></li>
-						<li id="5"><a href="/machine/get/1/user_interface/timer-setting">Timer Setting</a></li>
+						<li id="1" class="active"><a href="" id="a1">Home</a></li>
+						<li id="2"><a href="" id="a2">Tank Setting</a></li>
+						<li id="3"><a href="" id="a3">Controller Setting</a></li>
+						<li id="4"><a href="" id="a4">Display Setting</a></li>
+						<li id="5"><a href="" id="a5">Timer Setting</a></li>
 					</ul>
 					<div class="clear"></div>
 				</div>
@@ -37,7 +37,18 @@
 <script>
     $( document ).ready(function() {
 
-        var str = document.URL
+        var str = document.URL;
+        // http://localhost:8000/machine/get/1/user_interface/
+        var regExp = /\/get\/(\d+)\//;
+        var matches = regExp.exec(str);
+        var id = matches[1];
+
+        $("#a1").attr("href", "/machine/get/" + id + "/user_interface/");
+        $("#a2").attr("href", "/machine/get/" + id + "/user_interface/tank-setting");
+        $("#a3").attr("href", "/machine/get/" + id + "/user_interface/controller-setting");
+        $("#a4").attr("href", "/machine/get/" + id + "/user_interface/display-setting");
+        $("#a5").attr("href", "/machine/get/" + id + "/user_interface/timer-setting");
+
         if(str.indexOf('tank-setting')!=-1){
             $('li.active').removeClass('active');
             $('#2').addClass('active');

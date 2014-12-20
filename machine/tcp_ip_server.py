@@ -20,6 +20,7 @@ f.close()
 dict_device_id_to_connection = {}
 
 def write_to_file(text):
+
     print_to_stderr(text)
     f = open(filename, 'a+')
     bounding_string = '-----------------------------------------------------'
@@ -30,6 +31,15 @@ def write_to_file(text):
 
 def print_to_stderr(text):
     print >>sys.stderr, text
+
+
+def convert_binary_string_to_integer_array(string_to_send):
+    result = []
+    for i in xrange(0, len(string_to_send), 8):
+        part = string_to_send[i:i+8]
+        result.append(str(int(part, 2)))
+
+    return '--'.join(result)
 
 
 num_attempts = 0
@@ -73,8 +83,11 @@ while True:
             # for now we just send this to 123456
             # print dict_device_id_to_connection
             string_to_send = received_string.split(" ")[1]
+            integer_array = convert_binary_string_to_integer_array(string_to_send)
             # print string_to_send
-            write_to_file('*********** SENT DATA: ' + string_to_send[:24] + '--' + string_to_send[24:32] + '--' + string_to_send[32:40] + '--' + string_to_send[40:] + '*****************')
+            write_to_file('*********** SENT DATA DEBUGGING: ' + string_to_send[:24] + '--' + string_to_send[24:32] + '--' + string_to_send[32:40] + '--' + string_to_send[40:] + '*****************')
+            write_to_file('*********** SENT DATA ACTUAL: ' + integer_array + '*****************')
+
             connection = dict_device_id_to_connection[string_to_send[:24]]
             connection.sendall(string_to_send)
         else:

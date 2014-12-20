@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>administrator panel</title>
+</head>
+
+<body>
+<h1>CONTROLLER ID: {{ data.device_id }}</h1>
+
+       <hr>
+        <h3>Controller Operating Mode</h3>
+        <hr>
+        <form action="submit" method="get">
+            <input type="hidden" value="4" name="id"><br/>
+            Input Password: <input type="password" name="pass" value="">
+            <span style="color: red;">{% if auth == 0 %}the entered password was incorrect{% endif %}</span><br>
+            Mode select:
+            <select name="m">
+                <option value="0" {% if data.com_m == 0 %}selected{% endif %}>Disable</option>
+                <option value="1" {% if data.com_m == 1 %}selected{% endif %}>Manual Mode</option>
+                <option value="2" {% if data.com_m == 2 %}selected{% endif %}>Semi Automatic</option>
+                <option value="3" {% if data.com_m == 3 %}selected{% endif %}>Fully Automatic</option>
+            </select><br>
+            Timer Select:
+            <select name="t">
+                <option value="0" {% if data.com_t == 0 %}selected{% endif %}>Timer based only</option>
+                <option value="1" {% if data.com_t == 1 %}selected{% endif %}>Timer as per mode set</option>
+            </select><br>
+            Trial Enabled/Disabled:
+            <select name="tr">
+                <option value="0" {% if data.com_tr == 0 %}selected{% endif %}>Trial Disabled</option>
+                <option value="1" {% if data.com_tr == 1 %}selected{% endif %}>Trial Enabled</option>
+            </select><br>
+            Trial Period in days:
+            <input type="number" name="d" min="1" max="30" value="{{ data.com_d }}"><br>
+            <input type="submit" value="submit"/>
+        </form>
+
+
+</body>
+</html>
