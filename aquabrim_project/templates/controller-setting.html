@@ -21,7 +21,7 @@
 						<li><a href="">Max Motor On Time</a></li>
 					</ul>
 				</div>
-				<div class="content" style="margin-left: 75px;">
+				<div class="content" style="margin-left: 75px; width: 416px;">
 					<div class="table-data-container">
 						<table width="40%" cellspacing="0" cellpadding="0" class="table-data controller-setting">
 							<th class="heading">Value</th>
@@ -45,7 +45,7 @@
 							<tr>
 								<form method="get" action="submit">
                                     <input type="hidden" name="id" value="7" />
-                                    <td><input name="td" type="number" value="{{ data.timeout_duration }}" size="2" min="60" /></td>
+                                    <td><input name="td" type="number" value="{{ data.timeout_duration }}" size="2" min="60" max="570"/></td>
                                     <td><input class="checkbox" type="checkbox" name="ep" value="1" {% if data.timeout_protection == 1%}checked{% endif %} /> </td>
                                     <td><input type="submit" value="submit" /> </td>
                                 </form>
@@ -129,6 +129,53 @@
 							</tr>
 						</table>
 					</div>
+
+				</div>
+            <div class="right-sidebar" style="border: none;display: inline-block;">
+					<h2 class="heading" style="width: 400px; border: none; background: #000000; height: 31px; color: #ffffff;">Controller Operating Mode Settings</h2>
+					<ul class="right-navigation">
+                    <li>
+                    <form action="submit" method="get">
+                    <input type="hidden" value="4" name="id">
+                    <input type="hidden" name="tr" value="0" />
+
+                    <table border="1" style="font-size:10px; height: 371px; background: #CCCCCC; width: 400px;">
+                        <tr>
+                            <td>Input Password:</td>
+                            <td><input type="password" name="pass" value=""></td>
+                            <td style="border: none;">
+                                <span style="color: red; font-size: 9px;">{% if auth == 0 %}incorrect password{% endif %}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mode Select</td>
+                            <td><select name="m">
+                <option value="0" {% if data.com_m == 0 %}selected{% endif %}>Disable</option>
+                <option value="1" {% if data.com_m == 1 %}selected{% endif %}>Manual Mode</option>
+                <option value="2" {% if data.com_m == 2 %}selected{% endif %}>Semi Automatic</option>
+                <option value="3" {% if data.com_m == 3 %}selected{% endif %}>Fully Automatic</option>
+            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Timer Select</td>
+                            <td><select name="t">
+                <option value="0" {% if data.com_t == 0 %}selected{% endif %}>Timer based only</option>
+                <option value="1" {% if data.com_t == 1 %}selected{% endif %}>Timer as per mode set</option>
+            </select></td>
+                        </tr>
+
+                            <td>Trial Period in days</td>
+                        <td><input type="number" name="d" min="1" max="30" value="{{ data.com_d }}"></td>
+                        </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="submit"/></td>
+                    </tr>
+                    </table>
+                    </form>
+
+                    </li>
+                    </ul>
 
 				</div>
 				<div class="clear"></div>

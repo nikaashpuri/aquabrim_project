@@ -6,9 +6,9 @@ register = template.Library()
 
 @register.filter
 def subtract(value, arg):
-    return int(arg) - value/5
+    return 215 - value
 
 
 @register.filter
 def add_special(value, arg):
-    return int(arg) + (110 -value)
+    return 65 + (110 -value)

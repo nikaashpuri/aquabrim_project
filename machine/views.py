@@ -104,6 +104,13 @@ def deviceData(request, data_id=1):
 
 def userInterface(request, data_id=1):
     controller = Controller.objects.get(id=data_id)
+    idno = controller.device_id
+    first_byte = int(idno[:3])
+    second_byte = int(idno[3:6])
+    third_byte = int(idno[6:])
+    dev_id_to_display = str(hex(first_byte))[2:] \
+                        + str(hex(second_byte))[2:] \
+                        + str(hex(third_byte))[2:]
     list_of_tanks = Tank.objects.all().filter(controller=controller, display=1)
     # print list_of_tanks
     tank_to_focus_on = int(request.GET.get('tank_to_focus_on', 0))
@@ -114,16 +121,27 @@ def userInterface(request, data_id=1):
                               {'data': list_of_tanks[tank_to_focus_on],
                                'list_of_tanks': list_of_tanks,
                                'tank_to_focus_on': tank_to_focus_on,
-                               'controller': controller})
+                               'controller': controller,
+                               'id_display': dev_id_to_display,})
     else:
         return render_to_response('index.html',
                               {'controller': controller,
                                'list_of_tanks': list_of_tanks,
+                               'id_display': dev_id_to_display,
                                })
 
 def userInterfaceControllerSetting(request, data_id=1):
-    return render_to_response('controller-setting.html',
-                              {'data': Controller.objects.get(id=data_id)})
+    aux_controller = Controller.objects.get(id=data_id)
+    if aux_controller.com_last_access_auth_or_not == 0:
+        aux_controller.com_last_access_auth_or_not = 1
+        aux_controller.save()
+        return render_to_response('controller-setting.html',
+                              {'data': aux_controller,
+                               'auth': 0})
+    else:
+        return render_to_response('controller-setting.html',
+                              {'data': aux_controller})
+
 
 def userInterfaceDisplaySetting(request, data_id=1):
     return render_to_response('display-setting.html',
@@ -247,10 +265,18 @@ def masterSubmitData(request, data_id):
 
 def commandData(request, data_id):
     aux_controller = Controller.objects.get(id=data_id)
+    idno = aux_controller.device_id
+    first_byte = int(idno[:3])
+    second_byte = int(idno[3:6])
+    third_byte = int(idno[6:])
+    dev_id_to_display = str(hex(first_byte))[2:] \
+                        + str(hex(second_byte))[2:] \
+                        + str(hex(third_byte))[2:]
     list_of_tanks = Tank.objects.all().filter(controller=aux_controller)
     return render_to_response('commands_minimal.html',
                               {'list_of_tanks': list_of_tanks,
-                               'data': aux_controller})
+                               'data': aux_controller,
+                               'id': dev_id_to_display})
 
 
 
@@ -429,23 +455,26 @@ def submitDataFromUserInterface(request, data_id):
 
 
     elif (command_id == 4):
-        mode_selection = request.GET.get('mode')
-        if (not mode_selection == ""):
-            controller.mode_selection = mode_selection
-        trial_period = request.GET.get('D')
-        if (not trial_period == ""):
-            controller.trial_period = trial_period
-        timer_based = request.GET.get('T')
-        if (not timer_based == ""):
-            controller.timer_based = timer_based
-        trial_enabled = request.GET.get('Tr')
-        if (not trial_enabled == ""):
-            controller.trial_enabled = trial_enabled
+        password = request.GET.get('pass')
+        m = request.GET.get('m')
+        t = request.GET.get('t')
+        tr = request.GET.get('tr')
+        d = request.GET.get('d')
 
-        PayloadA = "00000000"
-        PayloadB = convert2bin(trial_enabled, 1) + convert2bin(trial_period, 4) + convert2bin(timer_based,
-                                                                                              1) + convert2bin(
-            mode_selection, 2)
+        if controller.com_pass == password:
+            controller.com_m = m
+            controller.com_t = t
+            controller.com_tr = tr
+            controller.com_d = d
+
+            d = int(d)/2
+
+            PayloadA = password
+            PayloadB = convert2bin(tr, 1) + convert2bin(d, 4) \
+                   + convert2bin(t, 1) \
+                   + convert2bin(m, 2)
+        else:
+            controller.com_last_access_auth_or_not = 0
 
 
     elif (command_id == 5):
@@ -604,6 +633,8 @@ def submitDataFromUserInterface(request, data_id):
 
         timer.save()
 
+        m = int(m)/2
+
         PayloadA = convert2bin(timer_enable, 1) + convert2bin(week_days, 2) + convert2bin(hours, 5)
         PayloadB = convert2bin(timer_number, 3) + convert2bin(m, 5)
 
@@ -624,6 +655,8 @@ def submitDataFromUserInterface(request, data_id):
         timer.max_duration_minutes = max_duration_minutes
 
         timer.save()
+
+        max_duration_minutes = int(max_duration_minutes)/2
 
         PayloadA = "000" + convert2bin(max_duration_hours, 5)
         PayloadB = convert2bin(timer_number, 3) + convert2bin(max_duration_minutes, 5)
